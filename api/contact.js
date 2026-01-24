@@ -51,7 +51,7 @@ module.exports = async (req, res) => {
     // Email to business owner
     const ownerMailOptions = {
       from: `"Website Kontaktformular" <${process.env.SMTP_USER}>`,
-      to: 'kontakt@baustellen-timelapse-leipzig.de',
+      to: 'timelapse@futurefabrik.com',
       replyTo: email,
       subject: `Neue Anfrage von ${name}`,
       html: `
@@ -106,7 +106,7 @@ module.exports = async (req, res) => {
             </p>
             
             <div style="margin: 20px 0;">
-              <p><strong>E-Mail:</strong> kontakt@baustellen-timelapse-leipzig.de</p>
+              <p><strong>E-Mail:</strong> timelapse@futurefabrik.com</p>
               <p><strong>Website:</strong> <a href="https://baustellen-timelapse-leipzig.de">baustellen-timelapse-leipzig.de</a></p>
             </div>
           </div>
