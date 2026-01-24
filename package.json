@@ -1,0 +1,17 @@
+{
+  "name": "baustellen-timelapse-leipzig",
+  "version": "1.0.0",
+  "description": "Professional construction timelapse website for Leipzig",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["construction", "timelapse", "leipzig", "baudokumentation"],
+  "author": "Baustellen-Timelapse Leipzig",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  }
+}
