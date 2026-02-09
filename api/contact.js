@@ -46,6 +46,10 @@ module.exports = async (req, res) => {
       },
     });
 
+    // Email configuration
+    const senderEmail = process.env.GMAIL_USER || 'futurefabrik1@gmail.com';
+    const recipientEmail = 'timelapse@futurefabrik.com';
+
     // Email to business owner
     const ownerMailOptions = {
       from: `"Website Kontaktformular" <${senderEmail}>`,
