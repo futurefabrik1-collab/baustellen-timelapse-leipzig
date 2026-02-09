@@ -25,12 +25,4 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- FAQ -->
-  <url>
-    <loc>https://baustellen-timelapse-leipzig.de/faq.html</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
 </urlset>
