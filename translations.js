@@ -10,19 +10,22 @@ const translations = {
     nav_cta: "Projekt besprechen",
     
     // Homepage
-    home_hero_title: "Professionelle Baustellen-Zeitraffer",
-    home_hero_subtitle: "Dokumentieren Sie Ihr Bauprojekt in beeindruckenden 4K-Zeitraffer-Videos",
-    home_hero_desc: "Von der ersten Schaufel bis zum letzten Pinselstrich – wir machen Ihren Baufortschritt sichtbar.",
-    home_hero_cta1: "Kostenlos beraten lassen",
-    home_hero_cta2: "Referenzen ansehen",
+    home_hero_title: "BAUSTELLEN-ZEITRAFFER für LEIPZIG",
+    home_hero_subtitle: "Für Bauunternehmen, Architekturbüros und Projektentwickler: Hochauflösende Baudokumentation mit 4K-Kameras, LTE-Anbindung und professioneller Filmproduktion – alles aus einer Hand.",
+    home_hero_cta: "Jetzt anfragen",
     
-    home_features_title: "Warum Baustellen-Zeitraffer?",
-    home_feature1_title: "Marketing & Präsentation",
-    home_feature1_desc: "Beeindruckende Videos für Website, Social Media und Investoren-Präsentationen",
-    home_feature2_title: "Dokumentation & Bauakte",
-    home_feature2_desc: "Lückenlose digitale Baudokumentation für rechtliche Absicherung",
-    home_feature3_title: "Projektmanagement",
-    home_feature3_desc: "Überwachen Sie den Baufortschritt von überall aus in Echtzeit",
+    // Services Section
+    services_title: "Komplettlösungen für Ihre Baudokumentation",
+    services_subtitle: "Von der Kamera-Installation bis zum fertigen 3D-Modell – wir begleiten Ihr Bauprojekt mit modernster Technik.",
+    
+    service1_title: "Baustellenkamera",
+    service1_desc: "Hochauflösende 4K-Kameras mit LTE, Cloud-Zugang und professioneller Installation. Perfekt für laufende Bauüberwachung.",
+    
+    service2_title: "Zeitraffer-Filmproduktion",
+    service2_desc: "Professionelle Videos mit Musik, Logo und Animationen. Ideal für Marketing, Dokumentation und Präsentationen.",
+    
+    service3_title: "Digitaler Zwilling & 3D",
+    service3_desc: "Einzigartige 3D/4D-Dokumentation mit Gaussian Splatting. Beobachten Sie die Evolution Ihres Projekts in immersiver 3D-Ansicht.",
     
     home_process_title: "So funktioniert's",
     home_step1_title: "Beratung & Planung",
@@ -63,19 +66,22 @@ const translations = {
     nav_cta: "Discuss Project",
     
     // Homepage
-    home_hero_title: "Professional Construction Timelapse",
-    home_hero_subtitle: "Document your construction project with stunning 4K timelapse videos",
-    home_hero_desc: "From groundbreaking to final touches – we make your construction progress visible.",
-    home_hero_cta1: "Free Consultation",
-    home_hero_cta2: "View Portfolio",
+    home_hero_title: "CONSTRUCTION TIMELAPSE for LEIPZIG",
+    home_hero_subtitle: "For construction companies, architecture firms, and project developers: High-resolution construction documentation with 4K cameras, LTE connectivity, and professional film production – all from one source.",
+    home_hero_cta: "Request Now",
     
-    home_features_title: "Why Construction Timelapse?",
-    home_feature1_title: "Marketing & Presentation",
-    home_feature1_desc: "Impressive videos for website, social media, and investor presentations",
-    home_feature2_title: "Documentation & Records",
-    home_feature2_desc: "Complete digital construction documentation for legal protection",
-    home_feature3_title: "Project Management",
-    home_feature3_desc: "Monitor construction progress from anywhere in real-time",
+    // Services Section
+    services_title: "Complete Solutions for Your Construction Documentation",
+    services_subtitle: "From camera installation to the finished 3D model – we accompany your construction project with cutting-edge technology.",
+    
+    service1_title: "Construction Camera",
+    service1_desc: "High-resolution 4K cameras with LTE, cloud access, and professional installation. Perfect for ongoing construction monitoring.",
+    
+    service2_title: "Timelapse Film Production",
+    service2_desc: "Professional videos with music, logo, and animations. Ideal for marketing, documentation, and presentations.",
+    
+    service3_title: "Digital Twin & 3D",
+    service3_desc: "Unique 3D/4D documentation with Gaussian Splatting. Observe your project's evolution in immersive 3D view.",
     
     home_process_title: "How It Works",
     home_step1_title: "Consultation & Planning",
