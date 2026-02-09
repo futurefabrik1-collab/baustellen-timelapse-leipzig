@@ -21,8 +21,8 @@ const translations = {
     service1_title: "Baustellenkamera",
     service1_desc: "Hochauflösende 4K-Kameras mit LTE, Cloud-Zugang und professioneller Installation. Perfekt für laufende Bauüberwachung.",
     
-    service2_title: "Zeitraffer-Filmproduktion",
-    service2_desc: "Professionelle Videos mit Musik, Logo und Animationen. Ideal für Marketing, Dokumentation und Präsentationen.",
+    service2_title: "Zeitraffer Filmproduktion",
+    service2_desc: "Professionelle Zeitrafferfilme für Marketing, Investor Reporting und Projektdokumentation. Storytelling statt nur Überwachung.",
     
     service3_title: "Digitaler Zwilling & 3D",
     service3_desc: "Einzigartige 3D/4D-Dokumentation mit Gaussian Splatting. Beobachten Sie die Evolution Ihres Projekts in immersiver 3D-Ansicht.",
@@ -78,7 +78,7 @@ const translations = {
     service1_desc: "High-resolution 4K cameras with LTE, cloud access, and professional installation. Perfect for ongoing construction monitoring.",
     
     service2_title: "Timelapse Film Production",
-    service2_desc: "Professional videos with music, logo, and animations. Ideal for marketing, documentation, and presentations.",
+    service2_desc: "Professional timelapse films for marketing, investor reporting, and project documentation. Storytelling, not just surveillance.",
     
     service3_title: "Digital Twin & 3D",
     service3_desc: "Unique 3D/4D documentation with Gaussian Splatting. Observe your project's evolution in immersive 3D view.",
