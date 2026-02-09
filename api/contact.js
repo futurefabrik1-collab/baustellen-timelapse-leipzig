@@ -37,14 +37,12 @@ module.exports = async (req, res) => {
       });
     }
 
-    // Create email transporter
+    // Create email transporter - using same env vars as 3digitalarchive.de
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: process.env.SMTP_PORT || 587,
-      secure: false, // true for 465, false for other ports
+      service: 'gmail',
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
 
@@ -131,19 +129,9 @@ module.exports = async (req, res) => {
 
   } catch (error) {
     console.error('Email error:', error);
-    console.error('SMTP Config:', {
-      host: process.env.SMTP_HOST,
-      user: process.env.SMTP_USER ? 'SET' : 'NOT SET',
-      pass: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
-    });
     return res.status(500).json({
       error: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.',
-      details: error.message, // Show error details temporarily for debugging
-      config: {
-        smtpHost: process.env.SMTP_HOST || 'NOT SET',
-        smtpUser: process.env.SMTP_USER ? 'SET' : 'NOT SET',
-        smtpPass: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
-      }
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
     });
   }
 };
