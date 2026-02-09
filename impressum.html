@@ -305,13 +305,25 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo" aria-label="Baustellen-Timelapse Leipzig Startseite">
                     <div class="logo-icon">BTL</div>
                     <div>
                         <div style="font-weight: 600; font-size: 1rem;">Baustellen-Timelapse</div>
                         <div style="font-size: 0.75rem; color: var(--muted);">Leipzig</div>
                     </div>
                 </a>
-                <nav aria-label="Hauptnavigation">
+                <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <nav aria-label="Hauptnavigation" id="mainNav">
                     <a href="/leistungen.html" data-i18n="nav_services">Leistungen</a>
                     <a href="#portfolio" data-i18n="nav_portfolio">Referenzen</a>
                     <a href="/ratgeber.html" data-i18n="nav_guide">Ratgeber</a>
