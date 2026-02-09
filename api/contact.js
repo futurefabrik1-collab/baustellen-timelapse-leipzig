@@ -48,7 +48,7 @@ module.exports = async (req, res) => {
 
     // Email to business owner
     const ownerMailOptions = {
-      from: `"Website Kontaktformular" <${process.env.SMTP_USER}>`,
+      from: `"Website Kontaktformular" <${senderEmail}>`,
       to: 'timelapse@futurefabrik.com',
       replyTo: email,
       subject: `Neue Anfrage von ${name}`,
@@ -78,7 +78,7 @@ module.exports = async (req, res) => {
 
     // Confirmation email to customer
     const customerMailOptions = {
-      from: `"Baustellen-Timelapse Leipzig" <${process.env.SMTP_USER}>`,
+      from: `"Baustellen-Timelapse Leipzig" <${senderEmail}>`,
       to: email,
       subject: 'Ihre Anfrage wurde empfangen',
       html: `
