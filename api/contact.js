@@ -131,9 +131,19 @@ module.exports = async (req, res) => {
 
   } catch (error) {
     console.error('Email error:', error);
+    console.error('SMTP Config:', {
+      host: process.env.SMTP_HOST,
+      user: process.env.SMTP_USER ? 'SET' : 'NOT SET',
+      pass: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
+    });
     return res.status(500).json({
       error: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
+      details: error.message, // Show error details temporarily for debugging
+      config: {
+        smtpHost: process.env.SMTP_HOST || 'NOT SET',
+        smtpUser: process.env.SMTP_USER ? 'SET' : 'NOT SET',
+        smtpPass: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
+      }
     });
   }
 };
