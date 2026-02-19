@@ -25,4 +25,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Datenschutz (Privacy Policy) -->
+  <url>
+    <loc>https://baustellen-timelapse-leipzig.de/datenschutz</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Impressum (Legal Notice) -->
+  <url>
+    <loc>https://baustellen-timelapse-leipzig.de/impressum</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
