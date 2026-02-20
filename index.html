@@ -14,6 +14,16 @@
     <meta name="author" content="Future Fabrik GmbH">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://baustellen-timelapse-leipzig.de/">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-WBTHFLXN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GT-WBTHFLXN');
+      gtag('config', 'G-SQNCDF7EPW');
+    </script>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -226,12 +236,12 @@
     </script>
     
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-451DTY0R49"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQNCDF7EPW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-451DTY0R49');
+      gtag('config', 'G-SQNCDF7EPW');
     </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1770,6 +1780,12 @@
 
         // Contact Form Handler
         document.addEventListener('DOMContentLoaded', function() {
+            const trackEvent = (eventName, params = {}) => {
+                if (typeof window.gtag === 'function') {
+                    window.gtag('event', eventName, params);
+                }
+            };
+
             // Initialize map
             initMap();
             
@@ -1839,6 +1855,10 @@
                     const data = await response.json();
                     
                     if (response.ok) {
+                        trackEvent('form_submit', {
+                            form_name: 'contactForm',
+                            page_location: window.location.href
+                        });
                         showToast(data.message, 'success');
                         contactForm.reset();
                         // Clear any validation errors
@@ -1866,6 +1886,25 @@
                         submitBtn.innerHTML = originalButtonText;
                     }, 1000);
                 }
+            });
+
+            // Track click-based lead intents
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('call_click', {
+                        link_url: link.getAttribute('href') || '',
+                        page_location: window.location.href
+                    });
+                });
+            });
+
+            document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('whatsapp_click', {
+                        link_url: link.getAttribute('href') || '',
+                        page_location: window.location.href
+                    });
+                });
             });
 
             // Smooth scroll for anchor links
