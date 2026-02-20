@@ -5,6 +5,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.baustellen-timelapse-leipzig.de"
+        }
+      ],
+      "destination": "https://baustellen-timelapse-leipzig.de/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
