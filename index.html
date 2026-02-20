@@ -1190,9 +1190,11 @@
                 <p class="animate-fade-in" style="animation-delay: 0.2s;" data-i18n="home_hero_subtitle">
                     Für Bauunternehmen, Architekturbüros und Projektentwickler: Hochauflösende Baudokumentation mit 4K-Kameras, LTE-Anbindung und professioneller Filmproduktion – alles aus einer Hand.
                 </p>
-                <div class="animate-fade-in" style="animation-delay: 0.3s;">
+                <div class="animate-fade-in" style="animation-delay: 0.3s; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: center;">
                     <a href="#contact" class="btn" style="padding: 1rem 2rem; font-size: 1.125rem;" data-i18n="home_hero_cta">Jetzt anfragen</a>
+                    <a href="mailto:kontakt@baustellen-timelapse-leipzig.de" class="btn" style="padding: 1rem 2rem; font-size: 1.125rem; background: transparent; border: 1px solid var(--primary); color: var(--primary);">Direkt per E-Mail</a>
                 </div>
+                <div class="animate-fade-in" style="animation-delay: 0.35s; margin-top: 0.75rem; color: #f5f5f5; font-size: 0.95rem; opacity: 0.95;">Unverbindliche Erstberatung • Antwort in 24h • Einsatz in Leipzig + 100 km</div>
                 <div class="hero-features animate-fade-in" style="animation-delay: 0.4s;">
                     <div class="hero-feature">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1475,6 +1477,42 @@
                 </div>
             </div>
         </section>
+        <!-- SEO Content Section -->
+        <section style="background: var(--background);">
+            <div class="container">
+                <div class="section-header" style="text-align: left; max-width: 980px; margin: 0 auto 2rem;">
+                    <div class="section-badge">Baustellenkamera Leipzig</div>
+                    <h2 class="section-title">Mehr Sichtbarkeit, weniger Abstimmungsaufwand auf der Baustelle</h2>
+                    <p class="section-description" style="margin: 0;">
+                        Mit einer professionellen Baustellenkamera in Leipzig dokumentieren Sie den Baufortschritt lückenlos,
+                        reduzieren Vor-Ort-Termine und schaffen Transparenz für Bauherren, Projektleitung und Nachunternehmer.
+                        Unsere Lösung kombiniert wetterfeste 4K-Hardware, LTE-Anbindung und tägliche Cloud-Synchronisation.
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+                    <div class="card" style="padding: 1.2rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Für Bauunternehmen</h3>
+                        <p style="color: var(--muted);">Baufortschritt für interne Steuerung und Auftraggeber-Kommunikation jederzeit abrufbar.</p>
+                    </div>
+                    <div class="card" style="padding: 1.2rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Für Projektentwickler</h3>
+                        <p style="color: var(--muted);">Marketingfähige Zeitraffer-Videos und belastbare Dokumentation aus einem Workflow.</p>
+                    </div>
+                    <div class="card" style="padding: 1.2rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Für Architekturbüros</h3>
+                        <p style="color: var(--muted);">Visuelle Statuskontrolle, nachvollziehbare Meilensteine und weniger Abstimmungsaufwand.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.4rem; padding: 1rem 1.2rem; border: 1px solid var(--border); border-radius: 0.8rem; background: rgba(245, 158, 11, 0.08);">
+                    <strong>Direkter Kontakt:</strong>
+                    <a href="mailto:kontakt@baustellen-timelapse-leipzig.de" style="color: var(--primary); margin-left: 0.4rem;">kontakt@baustellen-timelapse-leipzig.de</a>
+                    <span style="color: var(--muted); margin-left: 0.5rem;">(Antwort in der Regel innerhalb von 24h)</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Form Section -->
         <section id="contact" style="background: rgba(23, 23, 23, 0.3);">
             <div class="container">
@@ -1907,6 +1945,15 @@
             });
 
             // Track click-based lead intents
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('email_click', {
+                        link_url: link.getAttribute('href') || '',
+                        page_location: window.location.href
+                    });
+                });
+            });
+
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', () => {
                     trackEvent('call_click', {
