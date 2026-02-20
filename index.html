@@ -1810,6 +1810,11 @@
                 });
 
                 if (!isValid) {
+                    trackEvent('form_error', {
+                        form_name: 'contactForm',
+                        error_type: 'validation',
+                        page_location: window.location.href
+                    });
                     showToast('Bitte korrigieren Sie die Fehler im Formular', 'error');
                     return;
                 }
@@ -1825,6 +1830,11 @@
                     website: contactForm.querySelector('#website').value.trim() // Honeypot field
                 };
                 
+                trackEvent('form_attempt', {
+                    form_name: 'contactForm',
+                    page_location: window.location.href
+                });
+
                 // Disable button and show loading
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<span class="spinner"></span> Wird gesendet...';
@@ -1862,13 +1872,29 @@
                             }
                         });
                     } else {
+                        trackEvent('form_error', {
+                            form_name: 'contactForm',
+                            error_type: 'api_response',
+                            error_status: response.status,
+                            page_location: window.location.href
+                        });
                         showToast(data.error || 'Ein Fehler ist aufgetreten', 'error');
                     }
                 } catch (error) {
                     clearTimeout(timeoutId);
                     if (error.name === 'AbortError') {
+                        trackEvent('form_error', {
+                            form_name: 'contactForm',
+                            error_type: 'timeout',
+                            page_location: window.location.href
+                        });
                         showToast('Zeitüberschreitung. Bitte versuchen Sie es erneut.', 'error');
                     } else {
+                        trackEvent('form_error', {
+                            form_name: 'contactForm',
+                            error_type: 'network',
+                            page_location: window.location.href
+                        });
                         showToast('Verbindungsfehler. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail: kontakt@baustellen-timelapse-leipzig.de', 'error');
                     }
                     console.error('Form submission error:', error);
