@@ -1,0 +1,33 @@
+name: Autonomous Growth Loop
+
+on:
+  schedule:
+    - cron: '15 6 * * 1' # Mondays 06:15 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  market-intel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate competitor + SEO report
+        run: node scripts/market-intel.mjs
+        env:
+          SITE_URL: https://baustellen-timelapse-leipzig.de
+          COMPETITOR_URLS: https://www.netco.de/professionelle-timelapse-kameras-fuer-baustellen/,https://baustellen-kamera.de/,https://www.bau.camera/
+
+      - name: Commit report
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(growth): weekly autonomous market intel update'
+          file_pattern: reports/*.md
