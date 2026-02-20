@@ -2,5 +2,18 @@
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.baustellen-timelapse-leipzig.de"
+        }
+      ],
+      "destination": "https://baustellen-timelapse-leipzig.de/:path*",
+      "permanent": true
+    }
+  ]
 }
