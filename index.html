@@ -769,71 +769,133 @@
         }
 
         /* Video/Portfolio */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
+        .portfolio-intro {
+            max-width: 960px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+
+        .portfolio-feature {
+            max-width: 1040px;
+            margin: 0 auto 2.5rem;
+            background: rgba(18, 18, 18, 0.94);
+            border: 1px solid rgba(82, 82, 82, 0.6);
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
         }
 
         @media (min-width: 768px) {
+            .portfolio-feature {
+                padding: 1.25rem;
+            }
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        @media (min-width: 992px) {
             .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
         .portfolio-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             background: rgba(23, 23, 23, 0.95);
-            border: 1px solid var(--border);
-            border-radius: 0.75rem;
+            border: 1px solid rgba(82, 82, 82, 0.7);
+            border-radius: 0.9rem;
             overflow: hidden;
-            transition: all 0.3s;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
         .portfolio-card:hover {
-            border-color: rgba(245, 158, 11, 0.3);
+            transform: translateY(-2px);
+            border-color: rgba(245, 158, 11, 0.45);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-shell {
+            padding: 0.9rem;
+            background: rgba(10, 10, 10, 0.7);
+            border-bottom: 1px solid rgba(82, 82, 82, 0.55);
         }
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            background: var(--card-bg);
-            border-radius: 0.75rem;
+            background: #000;
+            border-radius: 0.7rem;
+        }
+
+        .video-landscape {
+            padding-bottom: 56.25%;
+        }
+
+        .video-portrait-wrap {
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .video-portrait {
+            padding-bottom: 177.78%;
         }
 
         .video-container iframe,
         .video-container video {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
         }
-        
+
         .video-container video {
             object-fit: cover;
         }
 
         .portfolio-info {
-            padding: 1.5rem;
+            padding: 1.25rem 1.25rem 1.35rem;
         }
 
         .portfolio-tags {
             display: flex;
+            flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.95rem;
+        }
+
+        .tag-outline {
+            border: 1px solid rgba(245, 158, 11, 0.7);
+            color: var(--primary);
+            background: transparent;
         }
 
         .portfolio-title {
-            font-size: 1.25rem;
+            font-size: 1.18rem;
             font-weight: 600;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.45rem;
         }
 
         .portfolio-subtitle {
-            font-size: 0.875rem;
-            color: var(--muted);
+            font-size: 0.91rem;
+            color: #dedede;
+            line-height: 1.55;
+            margin-bottom: 0.75rem;
+        }
+
+        .portfolio-meta {
+            font-size: 0.82rem;
+            color: #bdbdbd;
+            line-height: 1.45;
+            border-top: 1px solid rgba(82, 82, 82, 0.45);
+            padding-top: 0.75rem;
         }
 
         /* Map */
@@ -1377,75 +1439,93 @@
         <section id="portfolio" style="background: var(--background); position: relative; z-index: 100;">
             <div class="container">
                 <div class="section-header">
-                    <div class="section-badge">Aktuelles Projekt</div>
-                    <h2 class="section-title">Neue Welle Leipzig – Zeitraffer</h2>
-                    <p class="section-description">Ein Beispiel unserer aktuellen Arbeit: Die komplette Baudokumentation des Projekts "Neue Welle" in Leipzig.</p>
+                    <div class="section-badge">Referenzen</div>
+                    <h2 class="section-title">Ausgewählte Projekte aus Leipzig</h2>
+                    <p class="section-description">Unsere Referenzen verbinden lückenlose Baudokumentation mit professioneller Filmproduktion. So entstehen Inhalte, die auf der Baustelle helfen und gleichzeitig in Marketing, Investor-Reporting und Projektkommunikation einsetzbar sind.</p>
                 </div>
 
-                <!-- Native Video -->
-                <div style="max-width: 1000px; margin: 0 auto 3rem;">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 0.75rem;">
-                        <video 
+                <div class="portfolio-intro">
+                    <p class="section-description" style="margin: 0;">
+                        Jedes Projekt wird mit einem klaren Setup umgesetzt: robuste Kamera-Infrastruktur, automatisierte Datensicherung,
+                        saubere Postproduktion und verständliche Übergabeformate für alle Beteiligten.
+                    </p>
+                </div>
+
+                <div class="portfolio-feature">
+                    <div class="video-container video-landscape">
+                        <video
                             autoplay
                             muted
                             loop
-                            controls 
-                            playsinline 
-                            poster="/neue_welle_thumb.png"
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            controls
+                            playsinline
+                            poster="/neue_welle_thumb.png">
                             <source src="/public/neue_welle_jan26.mov" type="video/mp4">
                             Ihr Browser unterstützt das Video-Tag nicht.
                         </video>
                     </div>
+                    <div class="portfolio-info" style="padding-bottom: 0.5rem;">
+                        <div class="portfolio-tags">
+                            <span class="tag">Leipzig</span>
+                            <span class="tag tag-outline">Langzeit-Dokumentation</span>
+                            <span class="tag tag-outline">Marketing-Edit</span>
+                        </div>
+                        <h3 class="portfolio-title">Neue Welle Leipzig – Projektüberblick</h3>
+                        <p class="portfolio-subtitle">Kontinuierliche Dokumentation eines komplexen Bauvorhabens mit regelmäßigen Zwischenständen für Bauherr, Projektsteuerung und Kommunikationsteams.</p>
+                        <p class="portfolio-meta">Leistungsumfang: Kamera-Setup vor Ort, cloudbasierter Zugriff, kuratierter Schnitt für Präsentationen sowie finale Archivierung des Bildmaterials.</p>
+                    </div>
                 </div>
 
-                <!-- YouTube Videos Grid -->
                 <div class="portfolio-grid">
-                    <!-- Video 1: Wohnhaus -->
-                    <div class="portfolio-card">
-                        <div style="max-width: 420px; margin: 0 auto;">
-                            <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; background: #000; border-radius: 0.75rem;">
-                            <iframe 
-                                src="https://www.youtube.com/embed/uOA2IUL0Uf8" 
-                                title="Wohnhaus Delitzscher Straße (Hochformat)" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
-                            </iframe>
+                    <article class="portfolio-card">
+                        <div class="video-shell">
+                            <div class="video-portrait-wrap">
+                                <div class="video-container video-portrait">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/uOA2IUL0Uf8"
+                                        title="Wohnhaus Delitzscher Straße (Hochformat)"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
                             </div>
                         </div>
                         <div class="portfolio-info">
                             <div class="portfolio-tags">
                                 <span class="tag">Wohnbau</span>
-                                <span class="tag" style="border: 1px solid var(--primary); color: var(--primary); background: transparent;">12 Monate</span>
+                                <span class="tag tag-outline">12 Monate Laufzeit</span>
+                                <span class="tag tag-outline">Social-First</span>
                             </div>
                             <h3 class="portfolio-title">Wohnhaus Delitzscher Straße</h3>
-                            <p class="portfolio-subtitle">Hochformat-Clip für Social & Projektkommunikation</p>
+                            <p class="portfolio-subtitle">Vertikaler Projektclip für Social Media, Website-Einbindung und Bauherren-Updates. Fokus auf klar erkennbare Fortschrittsphasen und visuelle Qualität auf Mobilgeräten.</p>
+                            <p class="portfolio-meta">Lieferung: Hochformat-Versionen, optimierte Exportgrößen und ein konsistenter Look für wiederkehrende Projektkommunikation.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Video 4: 4D Construction -->
-                    <div class="portfolio-card">
-                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 0.75rem;">
-                            <iframe 
-                                src="https://www.youtube.com/embed/YawguDkewgM" 
-                                title="4D Construction Twin" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
-                            </iframe>
+                    <article class="portfolio-card">
+                        <div class="video-shell">
+                            <div class="video-container video-landscape">
+                                <iframe
+                                    src="https://www.youtube.com/embed/YawguDkewgM"
+                                    title="4D Construction Twin"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
                         </div>
                         <div class="portfolio-info">
                             <div class="portfolio-tags">
                                 <span class="tag">Innovation</span>
-                                <span class="tag" style="border: 1px solid var(--primary); color: var(--primary); background: transparent;">4D Evolution</span>
+                                <span class="tag tag-outline">4D Evolution</span>
+                                <span class="tag tag-outline">Planungsabgleich</span>
                             </div>
                             <h3 class="portfolio-title">4D Construction Twin</h3>
-                            <p class="portfolio-subtitle">Zeitliche 3D-Entwicklung</p>
+                            <p class="portfolio-subtitle">Visualisierung der zeitlichen Bauentwicklung in einer kompakten Darstellung – ideal für Abstimmung mit Planung, Ausführung und Stakeholdern.</p>
+                            <p class="portfolio-meta">Mehrwert: Meilensteine werden schneller nachvollziehbar, Fortschrittsberichte klarer und projektbezogene Entscheidungen belastbarer.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
