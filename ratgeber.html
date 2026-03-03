@@ -352,7 +352,11 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.75rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+            background: rgba(23,23,23,0.75);
+            border: 1px solid var(--border);
+            border-radius: 0.85rem;
+            padding: 0.9rem;
         }
         
         .category-tag {
@@ -374,17 +378,22 @@
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
+            gap: 1.25rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: rgba(20,20,20,0.78);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
         }
         
         .article-card {
-            background: var(--card-bg);
+            background: linear-gradient(180deg, rgba(30,30,30,0.96), rgba(23,23,23,0.96));
             border: 1px solid var(--border);
             border-radius: 0.75rem;
-            padding: 2rem;
+            padding: 1.4rem;
             transition: all 0.3s;
             cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.22);
         }
         
         .article-card:hover {
@@ -522,8 +531,8 @@
                 <span class="badge">Wissen & Insights</span>
                 <h1>Ratgeber</h1>
                 <p class="subtitle">
-                    Praxiswissen rund um Baustellenkameras, Zeitraffer-Technologie und digitale Dokumentation. 
-                    Von Experten für Bauherren und Projektleiter.
+                    Kompakte Praxisinfos zu Baustellenkameras, Zeitraffer-Technologie und digitaler Dokumentation
+                    für Bauherren und Projektleiter.
                 </p>
             </div>
 
@@ -642,57 +651,6 @@
                     </p>
                 </div>
 
-                <!-- Article 9 -->
-                <div class="article-card">
-                    <div class="article-meta">
-                        <span class="article-category">Technik</span>
-                        <span class="article-time">⏱️ 7 Min.</span>
-                    </div>
-                    <h3>Cloud vs. Lokalspeicher: Was ist besser?</h3>
-                    <p>
-                        Vorteile und Nachteile von Cloud-Speicherung und lokalen SD-Karten 
-                        für Ihre Baustellendokumentation.
-                    </p>
-                </div>
-
-                <!-- Article 10 -->
-                <div class="article-card">
-                    <div class="article-meta">
-                        <span class="article-category">Marketing</span>
-                        <span class="article-time">⏱️ 6 Min.</span>
-                    </div>
-                    <h3>Storytelling mit Zeitraffern: Best Practices</h3>
-                    <p>
-                        Von der rohen Aufnahme zum emotionalen Film: Wie Sie mit Zeitraffern 
-                        Geschichten erzählen, die begeistern.
-                    </p>
-                </div>
-
-                <!-- Article 11 -->
-                <div class="article-card">
-                    <div class="article-meta">
-                        <span class="article-category">Technik</span>
-                        <span class="article-time">⏱️ 5 Min.</span>
-                    </div>
-                    <h3>Drohnen vs. Baustellenkameras: Was passt zu Ihrem Projekt?</h3>
-                    <p>
-                        Wann sind Drohnen die bessere Wahl und wann sollten Sie auf 
-                        fest installierte Kameras setzen?
-                    </p>
-                </div>
-
-                <!-- Article 12 -->
-                <div class="article-card">
-                    <div class="article-meta">
-                        <span class="article-category">Planung</span>
-                        <span class="article-time">⏱️ 4 Min.</span>
-                    </div>
-                    <h3>Checkliste: Vorbereitung für die Kamera-Installation</h3>
-                    <p>
-                        Was Sie vor der Installation vorbereiten sollten – von Genehmigungen 
-                        über Montageorte bis zur Netzwerkplanung.
-                    </p>
-                </div>
             </div>
 
             <!-- CTA Section -->
