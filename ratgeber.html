@@ -349,35 +349,7 @@
             margin: 0 auto;
         }
         
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-            background: rgba(23,23,23,0.75);
-            border: 1px solid var(--border);
-            border-radius: 0.85rem;
-            padding: 0.9rem;
-        }
-        
-        .category-tag {
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 9999px;
-            color: var(--muted);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .category-tag:hover,
-        .category-tag.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .articles-grid {
+                .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 1.25rem;
@@ -537,15 +509,6 @@
                     Kompakte Praxisinfos zu Baustellenkameras, Zeitraffer-Technologie und digitaler Dokumentation
                     für Bauherren und Projektleiter.
                 </p>
-            </div>
-
-            <!-- Category Filters -->
-            <div class="categories">
-                <span class="category-tag active">Alle</span>
-                <span class="category-tag">Technik</span>
-                <span class="category-tag">Recht</span>
-                <span class="category-tag">Marketing</span>
-                <span class="category-tag">Planung</span>
             </div>
 
             <!-- Articles Grid -->
