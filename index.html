@@ -1263,7 +1263,7 @@
     </header>
 
     <!-- Fixed Background Image (outside main for proper layering) -->
-    <img src="/hero-construction.jpg" alt="Baustelle in Leipzig" class="hero-bg">
+    <img src="/hero-construction.jpg" alt="Baustelle in Leipzig" class="hero-bg" onerror="this.onerror=null;this.src='/public/hero-construction.jpg';">
     
     <main>
         <!-- Hero Section -->
@@ -1475,8 +1475,9 @@
                             controls
                             playsinline
                             poster="/neue_welle_thumb.png">
+                            <source src="/public/neue_welle_jan26.mp4" type="video/mp4">
                             <source src="/public/neue_welle_jan26.mov" type="video/quicktime">
-                            <source src="/public/neue_welle_jan26.mov">
+                            <source src="/public/neue_welle_jan26.mp4">
                             Ihr Browser unterstützt das Video-Tag nicht.
                         </video>
                     </div>
