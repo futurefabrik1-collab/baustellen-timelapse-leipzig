@@ -25,7 +25,7 @@ const translations = {
     service2_desc: "Professionelle Zeitrafferfilme für Marketing, Investor Reporting und Projektdokumentation. Storytelling statt nur Überwachung.",
     
     service3_title: "Digitaler Zwilling & 3D",
-    service3_desc: "Einzigartige 3D/4D-Dokumentation mit Gaussian Splatting. Beobachten Sie die Evolution Ihres Projekts in immersiver 3D-Ansicht.",
+    service3_desc: "Einzigartige 3D/4D-Dokumentation mit Reality Capture. Beobachten Sie die Entwicklung Ihres Projekts in immersiver 3D-Ansicht.",
     
     home_process_title: "So funktioniert's",
     home_step1_title: "Beratung & Planung",
@@ -81,7 +81,7 @@ const translations = {
     service2_desc: "Professional timelapse films for marketing, investor reporting, and project documentation. Storytelling, not just surveillance.",
     
     service3_title: "Digital Twin & 3D",
-    service3_desc: "Unique 3D/4D documentation with Gaussian Splatting. Observe your project's evolution in immersive 3D view.",
+    service3_desc: "Unique 3D/4D documentation with Reality Capture. Observe your project's progress in immersive 3D view.",
     
     home_process_title: "How It Works",
     home_step1_title: "Consultation & Planning",
