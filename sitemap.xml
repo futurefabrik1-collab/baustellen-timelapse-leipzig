@@ -19,7 +19,7 @@
 
   <!-- Datenschutz (Privacy Policy) -->
   <url>
-    <loc>https://baustellen-timelapse-leipzig.de/datenschutz</loc>
+    <loc>https://baustellen-timelapse-leipzig.de/datenschutz.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -27,7 +27,7 @@
 
   <!-- Impressum (Legal Notice) -->
   <url>
-    <loc>https://baustellen-timelapse-leipzig.de/impressum</loc>
+    <loc>https://baustellen-timelapse-leipzig.de/impressum.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
