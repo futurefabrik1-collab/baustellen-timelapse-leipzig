@@ -941,10 +941,10 @@
         /* Map */
         #map {
             width: 100%;
-            height: 400px;
+            height: 560px;
             border-radius: 0.75rem;
             overflow: hidden;
-            border: 1px solid var(--border);
+            border: 1px solid #d4d4d8;
             position: relative;
             z-index: 200 !important;
         }
@@ -955,7 +955,7 @@
 
         @media (min-width: 768px) {
             #map {
-                height: 500px;
+                height: 620px;
             }
         }
 
@@ -1614,19 +1614,10 @@
                     <h2 class="section-title">📍 Unser Servicegebiet</h2>
                     <p class="section-description">Leipzig und Umgebung (ca. 100 km Radius). Einsätze darüber hinaus auf Anfrage.</p>
                 </div>
-                <div class="card" style="padding:0; overflow:hidden; position:relative; max-width: 980px; margin: 0 auto;">
-                    <iframe
-                        title="Servicegebiet Baustellen-Timelapse Leipzig"
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=10.4795%2C50.9209%2C14.4795%2C52.5209&layer=mapnik&marker=51.3397%2C12.3731"
-                        style="position:relative !important; inset:auto !important; width:100%; height:560px; border:0; display:block;"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    <div style="position:absolute; inset:0; pointer-events:none; display:flex; align-items:center; justify-content:center;">
-                        <div style="width:min(72vw, 320px); aspect-ratio:1/1; border:3px dashed rgba(245,158,11,.9); border-radius:50%; box-shadow:0 0 0 9999px rgba(0,0,0,.08) inset;"></div>
-                    </div>
-                    <div style="position:absolute; left:12px; bottom:12px; background:rgba(10,10,10,.8); color:#f59e0b; border:1px solid rgba(245,158,11,.45); border-radius:999px; padding:.35rem .75rem; font-size:.82rem; font-weight:600; pointer-events:none;">
-                        100 km Umkreis um Leipzig
+                <div class="card" style="padding:0.7rem; max-width: 980px; margin: 0 auto; background: #fff;">
+                    <div id="map" aria-label="Servicegebiet Karte"></div>
+                    <div style="text-align:center; margin-top:0.55rem; color: #6b7280; font-size: 0.86rem;">
+                        Leaflet + CARTO Positron · 100 km Umkreis um Leipzig
                     </div>
                 </div>
             </div>
@@ -1840,7 +1831,7 @@
                     dragging: true
                 }).setView([51.3397, 12.3731], 9);
 
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
                     subdomains: 'abcd',
                     maxZoom: 20
