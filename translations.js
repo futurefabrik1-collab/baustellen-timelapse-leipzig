@@ -50,6 +50,12 @@ const translations = {
     footer_imprint: "Impressum",
     footer_copyright: "© 2026 Baustellen-Timelapse Leipzig | Burnett & Manhardt GbR",
     
+    // Installation Gallery
+    install_badge: "Einblicke",
+    install_title: "Kamera-Installation vor Ort",
+    install_subtitle: "So montiert unser Team eine professionelle 4K-Baustellenkamera – hier bei einem Einsatz in Plagwitz, Leipzig. Rooftop-Montage, Ausrichtung und Inbetriebnahme in einem Zug.",
+    install_caption: "Installation in Plagwitz, Leipzig · März 2026",
+
     // Common
     learn_more: "Mehr erfahren",
     contact_us: "Kontakt aufnehmen",
@@ -106,6 +112,12 @@ const translations = {
     footer_imprint: "Imprint",
     footer_copyright: "© 2026 Baustellen-Timelapse Leipzig | Burnett & Manhardt GbR",
     
+    // Installation Gallery
+    install_badge: "Behind the Scenes",
+    install_title: "On-site Camera Installation",
+    install_subtitle: "How our team mounts a professional 4K construction camera — here during a job in Plagwitz, Leipzig. Rooftop mounting, alignment, and commissioning in one go.",
+    install_caption: "Installation in Plagwitz, Leipzig · March 2026",
+
     // Common
     learn_more: "Learn More",
     contact_us: "Contact Us",
