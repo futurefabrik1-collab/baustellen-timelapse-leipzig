@@ -11,32 +11,17 @@
 
   <!-- Ratgeber (Guide) -->
   <url>
-    <loc>https://baustellen-timelapse-leipzig.de/ratgeber.html</loc>
+    <loc>https://baustellen-timelapse-leipzig.de/ratgeber</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Datenschutz (Privacy Policy) -->
-  <url>
-    <loc>https://baustellen-timelapse-leipzig.de/datenschutz.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Impressum (Legal Notice) -->
-  <url>
-    <loc>https://baustellen-timelapse-leipzig.de/impressum.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 
 
   <!-- Landing Page: Miete & Preise -->
   <url>
-    <loc>https://baustellen-timelapse-leipzig.de/baustellenkamera-mieten-leipzig.html</loc>
+    <loc>https://baustellen-timelapse-leipzig.de/baustellenkamera-mieten-leipzig</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

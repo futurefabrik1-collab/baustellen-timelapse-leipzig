@@ -158,7 +158,6 @@
         "longitude": "12.3730747"
       },
       "url": "https://baustellen-timelapse-leipzig.de",
-      "telephone": "+49-XXX-XXXXXXX",
       "email": "futurefabrik1@gmail.com",
       "priceRange": "$$",
       "openingHoursSpecification": {
@@ -1276,8 +1275,8 @@
                 <nav aria-label="Hauptnavigation" id="mainNav">
                     <a href="#services" data-i18n="nav_services">Leistungen</a>
                     <a href="#portfolio" data-i18n="nav_portfolio">Referenzen</a>
-                    <a href="/ratgeber.html" data-i18n="nav_guide">Ratgeber</a>
-                    <a href="/baustellenkamera-mieten-leipzig.html">Miete & Preise</a>
+                    <a href="/ratgeber" data-i18n="nav_guide">Ratgeber</a>
+                    <a href="/baustellenkamera-mieten-leipzig">Miete & Preise</a>
                     <a href="#contact" data-i18n="nav_contact">Kontakt</a>
                     <div class="language-switcher">
                         <button class="lang-btn active" data-lang="de" aria-label="Deutsch">DE</button>
@@ -1750,8 +1749,8 @@
         <div class="container">
             <p>&copy; 2026 Baustellen-Timelapse Leipzig | Burnett & Manhardt GbR</p>
             <p style="margin-top: 0.5rem;">
-                <a href="/impressum.html" style="color: var(--primary); text-decoration: none;">Impressum</a> | 
-                <a href="/datenschutz.html" style="color: var(--primary); text-decoration: none;">Datenschutz</a>
+                <a href="/impressum" style="color: var(--primary); text-decoration: none;">Impressum</a> | 
+                <a href="/datenschutz" style="color: var(--primary); text-decoration: none;">Datenschutz</a>
             </p>
         </div>
     </footer>
@@ -1764,9 +1763,16 @@
         function showToast(message, type = 'success') {
             const toast = document.createElement('div');
             toast.className = `toast ${type}`;
-            
-            const icon = type === 'success' ? '✅' : '❌';
-            toast.innerHTML = `<span style="font-size: 1.5rem;">${icon}</span><div>${message}</div>`;
+
+            const iconEl = document.createElement('span');
+            iconEl.style.fontSize = '1.5rem';
+            iconEl.textContent = type === 'success' ? '✅' : '❌';
+
+            const msgEl = document.createElement('div');
+            msgEl.textContent = message;
+
+            toast.appendChild(iconEl);
+            toast.appendChild(msgEl);
             
             document.body.appendChild(toast);
             

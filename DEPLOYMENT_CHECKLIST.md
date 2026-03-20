@@ -31,35 +31,23 @@ Copy this checklist and check off items as you complete them.
 
 Choose ONE option and complete it:
 
-### Option A: Gmail (Easiest for Testing)
+### Option A: Gmail (Currently configured)
 - [ ] Enable 2-Factor Authentication on Google account
 - [ ] Generate App Password at https://myaccount.google.com/apppasswords
 - [ ] Copy the 16-character app password
 - [ ] Add to Vercel environment variables:
-  - [ ] `SMTP_HOST` = `smtp.gmail.com`
-  - [ ] `SMTP_PORT` = `587`
-  - [ ] `SMTP_USER` = `your-email@gmail.com`
-  - [ ] `SMTP_PASS` = `your-app-password`
+  - [ ] `GMAIL_USER` = `your-gmail@gmail.com`
+  - [ ] `GMAIL_APP_PASSWORD` = `your-16-char-app-password`
 - [ ] Click "Redeploy" in Vercel
 
-### Option B: SendGrid (Best for Production)
+### Option B: Switch to SendGrid (Best for Production)
 - [ ] Sign up at https://sendgrid.com (free tier)
 - [ ] Create API Key (Full Access)
-- [ ] Copy the API key
+- [ ] Update `api/contact.js` to use nodemailer SMTP transport instead of Gmail service
 - [ ] Add to Vercel environment variables:
-  - [ ] `SMTP_HOST` = `smtp.sendgrid.net`
-  - [ ] `SMTP_PORT` = `587`
-  - [ ] `SMTP_USER` = `apikey`
-  - [ ] `SMTP_PASS` = `your-sendgrid-api-key`
-- [ ] Click "Redeploy" in Vercel
-
-### Option C: Custom Domain Email
-- [ ] Get SMTP settings from email provider
-- [ ] Add to Vercel environment variables:
-  - [ ] `SMTP_HOST` = (from provider)
-  - [ ] `SMTP_PORT` = (usually 587)
-  - [ ] `SMTP_USER` = `kontakt@baustellen-timelapse-leipzig.de`
-  - [ ] `SMTP_PASS` = (email password)
+  - [ ] `GMAIL_USER` = `apikey`
+  - [ ] `GMAIL_APP_PASSWORD` = `your-sendgrid-api-key`
+- [ ] Also update `host`/`port` in the transporter config
 - [ ] Click "Redeploy" in Vercel
 
 ## 🧪 Testing

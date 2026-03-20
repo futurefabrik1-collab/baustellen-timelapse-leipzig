@@ -8,7 +8,18 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 module.exports = async (req, res) => {
+  // Apply CORS headers to every response
+  Object.entries(corsHeaders).forEach(([k, v]) => res.setHeader(k, v));
+
   // Handle preflight request
   if (req.method === 'OPTIONS') {
     return res.status(200).json({ success: true });
@@ -46,33 +57,38 @@ module.exports = async (req, res) => {
       },
     });
 
+    // Sanitize user input for safe HTML embedding
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = phone ? escapeHtml(phone) : '';
+    const safeMessage = escapeHtml(message);
+
     // Email configuration
     const senderEmail = process.env.GMAIL_USER || 'futurefabrik1@gmail.com';
-    const recipientEmail = 'timelapse@futurefabrik.com';
 
     // Email to business owner
     const ownerMailOptions = {
       from: `"Website Kontaktformular" <${senderEmail}>`,
       to: 'timelapse@futurefabrik.com',
       replyTo: email,
-      subject: `Neue Anfrage von ${name}`,
+      subject: `Neue Anfrage von ${safeName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #f59e0b; border-bottom: 2px solid #f59e0b; padding-bottom: 10px;">
             Neue Kontaktanfrage
           </h2>
-          
+
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>E-Mail:</strong> <a href="mailto:${email}">${email}</a></p>
-            ${phone ? `<p><strong>Telefon:</strong> ${phone}</p>` : ''}
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
+            ${safePhone ? `<p><strong>Telefon:</strong> ${safePhone}</p>` : ''}
           </div>
-          
+
           <div style="margin: 20px 0;">
             <h3 style="color: #333;">Nachricht:</h3>
-            <p style="white-space: pre-wrap; line-height: 1.6;">${message}</p>
+            <p style="white-space: pre-wrap; line-height: 1.6;">${safeMessage}</p>
           </div>
-          
+
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
             <p>Diese Nachricht wurde über das Kontaktformular auf baustellen-timelapse-leipzig.de gesendet.</p>
           </div>
@@ -90,17 +106,17 @@ module.exports = async (req, res) => {
           <div style="background-color: #f59e0b; padding: 20px; text-align: center;">
             <h1 style="color: #1a1a1a; margin: 0;">Baustellen-Timelapse Leipzig</h1>
           </div>
-          
+
           <div style="padding: 30px; background-color: #fff;">
-            <h2 style="color: #333;">Vielen Dank für Ihre Anfrage, ${name}!</h2>
-            
+            <h2 style="color: #333;">Vielen Dank für Ihre Anfrage, ${safeName}!</h2>
+
             <p style="line-height: 1.6; color: #555;">
               Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
             </p>
-            
+
             <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
               <h3 style="color: #333; margin-top: 0;">Ihre Nachricht:</h3>
-              <p style="white-space: pre-wrap; line-height: 1.6;">${message}</p>
+              <p style="white-space: pre-wrap; line-height: 1.6;">${safeMessage}</p>
             </div>
             
             <p style="line-height: 1.6; color: #555;">

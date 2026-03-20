@@ -48,7 +48,7 @@ const translations = {
     footer_legal: "Rechtliches",
     footer_privacy: "Datenschutz",
     footer_imprint: "Impressum",
-    footer_copyright: "© 2024 Baustellen-Timelapse Leipzig - Future Fabrik GmbH. Alle Rechte vorbehalten.",
+    footer_copyright: "© 2026 Baustellen-Timelapse Leipzig | Burnett & Manhardt GbR",
     
     // Common
     learn_more: "Mehr erfahren",
@@ -104,7 +104,7 @@ const translations = {
     footer_legal: "Legal",
     footer_privacy: "Privacy Policy",
     footer_imprint: "Imprint",
-    footer_copyright: "© 2024 Construction Timelapse Leipzig - Future Fabrik GmbH. All rights reserved.",
+    footer_copyright: "© 2026 Baustellen-Timelapse Leipzig | Burnett & Manhardt GbR",
     
     // Common
     learn_more: "Learn More",
