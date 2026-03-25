@@ -4,7 +4,7 @@
   "description": "Professional construction timelapse website for Leipzig",
   "main": "index.html",
   "scripts": {
-    "dev": "vercel dev",
+    "dev": "npx serve . -l 4304",
     "build": "echo 'Static site - no build needed'",
     "deploy": "vercel --prod",
     "market:intel": "node scripts/market-intel.mjs"

@@ -1,5 +1,6 @@
 {
   "buildCommand": "echo 'No build needed'",
+  "devCommand": "npx serve . -l $PORT",
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,

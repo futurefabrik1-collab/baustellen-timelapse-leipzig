@@ -53,7 +53,7 @@ const translations = {
     // Installation Gallery
     install_badge: "Einblicke",
     install_title: "Kamera-Installation vor Ort",
-    install_subtitle: "So montiert unser Team eine professionelle 4K-Baustellenkamera – hier bei einem Einsatz in Plagwitz, Leipzig. Rooftop-Montage, Ausrichtung und Inbetriebnahme in einem Zug.",
+    install_subtitle: "So montiert unser Team eine professionelle 6K-Baustellenkamera – hier bei einem Einsatz in Plagwitz, Leipzig. Rooftop-Montage, Ausrichtung und Inbetriebnahme in einem Zug.",
     install_caption: "Installation in Plagwitz, Leipzig · März 2026",
 
     // Common
