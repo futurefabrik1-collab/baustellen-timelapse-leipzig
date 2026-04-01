@@ -39,3 +39,8 @@ temp/
 
 # Project management
 STATUS.md
+
+# Large media originals (use optimised WebP/MP4 versions instead)
+public/Instalation/*.jpeg
+public/Instalation/*.jpg
+public/*.mov
