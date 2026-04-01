@@ -36,3 +36,6 @@ yarn-error.log*
 tmp/
 temp/
 *.backup
+
+# Project management
+STATUS.md
