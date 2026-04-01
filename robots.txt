@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /
+Disallow: /public/*.mov
+Disallow: /public/*.MOV
 
 Sitemap: https://baustellen-timelapse-leipzig.de/sitemap.xml
