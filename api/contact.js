@@ -65,11 +65,12 @@ module.exports = async (req, res) => {
 
     // Email configuration
     const senderEmail = process.env.GMAIL_USER || 'futurefabrik1@gmail.com';
+    const recipientEmail = process.env.RECIPIENT_EMAIL || senderEmail;
 
     // Email to business owner
     const ownerMailOptions = {
       from: `"Website Kontaktformular" <${senderEmail}>`,
-      to: 'timelapse@futurefabrik.com',
+      to: recipientEmail,
       replyTo: email,
       subject: `Neue Anfrage von ${safeName}`,
       html: `
