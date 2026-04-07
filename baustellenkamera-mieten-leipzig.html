@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baustellenkamera mieten in Leipzig | Miete & Leistungen</title>
+  <title>Baustellenkamera mieten in Leipzig | Miete & Preise</title>
   <meta name="description" content="Baustellenkamera mieten in Leipzig: 4K-Kamera, Cloud-Zugang, Zeitraffer-Export und DSGVO-konforme Umsetzung. Schnell startklar für Bauprojekte in Leipzig + 120 km." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://baustellen-timelapse-leipzig.de/baustellenkamera-mieten-leipzig" />
@@ -18,13 +18,18 @@
     <meta property="og:title" content="Baustellenkamera mieten in Leipzig | Miete & Preise">
     <meta property="og:description" content="Baustellenkamera mieten in Leipzig: 4K-Kamera, Cloud-Zugang, Zeitraffer-Export und DSGVO-konforme Umsetzung.">
     <meta property="og:image" content="https://baustellen-timelapse-leipzig.de/hero-construction.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 6K-Zeitraffer-Dokumentation">
     <meta property="og:locale" content="de_DE">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://baustellen-timelapse-leipzig.de/baustellenkamera-mieten-leipzig">
     <meta name="twitter:title" content="Baustellenkamera mieten in Leipzig | Miete & Preise">
     <meta name="twitter:description" content="Baustellenkamera mieten in Leipzig: 4K-Kamera, Cloud-Zugang, Zeitraffer-Export und DSGVO-konforme Umsetzung.">
     <meta name="twitter:image" content="https://baustellen-timelapse-leipzig.de/hero-construction.jpg">
+    <meta name="twitter:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 6K-Zeitraffer-Dokumentation">
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -48,10 +53,19 @@
     "@context":"https://schema.org",
     "@type":"Service",
     "name":"Baustellenkamera mieten in Leipzig",
-    "provider":{"@type":"Organization","name":"Baustellen-Timelapse Leipzig"},
+    "provider":{"@type":"Organization","name":"Baustellen-Timelapse Leipzig","url":"https://baustellen-timelapse-leipzig.de"},
     "areaServed":{"@type":"City","name":"Leipzig"},
     "serviceType":"Baustellenkamera-Miete und Zeitraffer-Dokumentation",
-    "url":"https://baustellen-timelapse-leipzig.de/baustellenkamera-mieten-leipzig"
+    "url":"https://baustellen-timelapse-leipzig.de/baustellenkamera-mieten-leipzig",
+    "hasOfferCatalog":{
+      "@type":"OfferCatalog",
+      "name":"Mietpakete Baustellenkamera Leipzig",
+      "itemListElement":[
+        {"@type":"Offer","name":"Starter (monatliches Update)","description":"Basisbetrieb, Updates, Standard-Support; Basic Installation","priceSpecification":{"@type":"UnitPriceSpecification","price":"400","priceCurrency":"EUR","unitText":"MONTH","minPrice":"400"}},
+        {"@type":"Offer","name":"Projekt (2× monatlich)","description":"Erhöhte Update-Frequenz und erweiterter Serviceumfang","priceSpecification":{"@type":"UnitPriceSpecification","price":"500","priceCurrency":"EUR","unitText":"MONTH","minPrice":"500","maxPrice":"650"}},
+        {"@type":"Offer","name":"Höhere Frequenz (wöchentlich)","description":"Wöchentliche Updates mit erweitertem Serviceaufwand","priceSpecification":{"@type":"UnitPriceSpecification","price":"750","priceCurrency":"EUR","unitText":"MONTH","minPrice":"750"}}
+      ]
+    }
   }
   </script>
 
@@ -148,8 +162,9 @@
     </section>
 
 
-    <section>
+    <section id="preise">
       <div class="container">
+        <h2 style="margin-bottom:1rem;" data-i18n="pricing_plans_title">Preise & Mietkonditionen</h2>
         <div class="card" style="margin-top:0; border-color: rgba(245,158,11,.35); background: rgba(245,158,11,.08);">
           <p class="muted" style="margin:0;" data-i18n="pricing_disclaimer">Beispielhafte Einstiegsraten für Leipzig und Umgebung. Die finalen Kosten hängen u. a. von Laufzeit, Update-Frequenz, Montageaufwand, Netzabdeckung und gewünschter Postproduktion ab.</p>
         </div>
@@ -198,7 +213,7 @@
     </div>
   </footer>
 
-  <script src="/translations.js"></script>
+  <script src="/translations.js" defer></script>
   <script>
     function toggleMobileMenu() {
       const nav = document.getElementById('mainNav');
