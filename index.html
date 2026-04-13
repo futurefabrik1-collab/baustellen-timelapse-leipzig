@@ -2145,6 +2145,8 @@
                             form_name: 'contactForm',
                             page_location: window.location.href
                         });
+                        // Google Ads conversion tracking
+                        gtag('event', 'conversion_event_submit_lead_form', {});
                         showToast(data.message, 'success');
                         contactForm.reset();
                         // Clear any validation errors
