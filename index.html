@@ -1892,7 +1892,7 @@
     </footer>
 
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 
     <script>
         // Toast notification system
@@ -2065,8 +2065,12 @@
                 }
             };
 
-            // Initialize map
-            initMap();
+            // Initialize map (wait for Leaflet)
+            if (typeof L !== 'undefined') {
+                initMap();
+            } else {
+                document.querySelector('script[src*="leaflet"]').addEventListener('load', initMap);
+            }
             
             // Initialize scroll animations
             initScrollAnimations();
