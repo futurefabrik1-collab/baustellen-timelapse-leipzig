@@ -48,24 +48,23 @@ module.exports = async (req, res) => {
       });
     }
 
-    // Create email transporter - using same env vars as 3digitalarchive.de
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.SMTP_HOST || 'smtp.sendgrid.net',
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: false,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.SMTP_USER || 'apikey',
+        pass: process.env.SMTP_PASS,
       },
     });
 
-    // Sanitize user input for safe HTML embedding
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
     const safePhone = phone ? escapeHtml(phone) : '';
     const safeMessage = escapeHtml(message);
 
-    // Email configuration
-    const senderEmail = process.env.GMAIL_USER || 'futurefabrik1@gmail.com';
-    const recipientEmail = process.env.RECIPIENT_EMAIL || senderEmail;
+    const senderEmail = process.env.SMTP_USER_EMAIL || 'baustellen-timelapse-leipzig@futurefabrik.com';
+    const recipientEmail = process.env.RECIPIENT_EMAIL || 'markadamburnett@gmail.com';
 
     // Email to business owner
     const ownerMailOptions = {
@@ -125,7 +124,8 @@ module.exports = async (req, res) => {
             </p>
             
             <div style="margin: 20px 0;">
-              <p><strong>E-Mail:</strong> timelapse@futurefabrik.com</p>
+              <p><strong>E-Mail:</strong> info@baustellen-timelapse-leipzig.de</p>
+              <p><strong>Telefon:</strong> 0178 134 5105</p>
               <p><strong>Website:</strong> <a href="https://baustellen-timelapse-leipzig.de">baustellen-timelapse-leipzig.de</a></p>
             </div>
           </div>
