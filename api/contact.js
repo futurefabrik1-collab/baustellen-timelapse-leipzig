@@ -152,7 +152,16 @@ module.exports = async (req, res) => {
     console.error('Email error:', error);
     return res.status(500).json({
       error: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
+      debug: {
+        message: error.message,
+        code: error.code,
+        command: error.command,
+        hasSmtpHost: !!process.env.SMTP_HOST,
+        hasSmtpPass: !!process.env.SMTP_PASS,
+        hasSmtpUser: !!process.env.SMTP_USER,
+        hasSenderEmail: !!process.env.SMTP_USER_EMAIL,
+        smtpHost: process.env.SMTP_HOST,
+      },
     });
   }
 };
