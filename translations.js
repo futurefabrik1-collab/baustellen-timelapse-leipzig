@@ -10,8 +10,8 @@ const translations = {
     nav_cta: "Projekt besprechen",
     
     // Homepage
-    home_hero_title: "BAUSTELLEN-ZEITRAFFER für LEIPZIG",
-    home_hero_subtitle: "Für Bauunternehmen, Architekturbüros und Projektentwickler: Hochauflösende Baudokumentation mit 4K-Kameras, LTE-Anbindung und professioneller Filmproduktion – alles aus einer Hand.",
+    home_hero_title: "BAUSTELLENKAMERA MIETEN in LEIPZIG",
+    home_hero_subtitle: "Wir montieren die 4K-Kamera in wenigen Tagen, Sie sehen Ihre Baustelle jederzeit in der Cloud — und am Ende erhalten Sie den fertigen Zeitrafferfilm für Marketing und Bauherren-Kommunikation. Lokales Team, ein Ansprechpartner, DSGVO-konform.",
     home_hero_cta: "Jetzt anfragen",
     
     // Services Section
@@ -230,8 +230,8 @@ const translations = {
     nav_cta: "Discuss Project",
     
     // Homepage
-    home_hero_title: "CONSTRUCTION TIMELAPSE for LEIPZIG",
-    home_hero_subtitle: "For construction companies, architecture firms, and project developers: High-resolution construction documentation with 4K cameras, LTE connectivity, and professional film production – all from one source.",
+    home_hero_title: "CONSTRUCTION CAMERA RENTAL in LEIPZIG",
+    home_hero_subtitle: "We install the 4K camera within days, you watch your site in the cloud at any time — and at the end you receive the finished timelapse film for marketing and client communication. Local team, one contact person, GDPR-compliant.",
     home_hero_cta: "Request Now",
     
     // Services Section

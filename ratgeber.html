@@ -34,7 +34,7 @@
     <meta property="og:image" content="https://baustellen-timelapse-leipzig.de/hero-construction.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 6K-Zeitraffer-Dokumentation">
+    <meta property="og:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 4K-Zeitraffer-Dokumentation">
     <meta property="og:locale" content="de_DE">
 
     <!-- Twitter -->
@@ -43,7 +43,7 @@
     <meta name="twitter:title" content="Baustellenkamera Ratgeber Leipzig | Tipps & Wissen">
     <meta name="twitter:description" content="Praxiswissen für erfolgreiche Baudokumentation mit Baustellenkameras und Zeitraffer.">
     <meta name="twitter:image" content="https://baustellen-timelapse-leipzig.de/hero-construction.jpg">
-    <meta name="twitter:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 6K-Zeitraffer-Dokumentation">
+    <meta name="twitter:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 4K-Zeitraffer-Dokumentation">
     
     <!-- Structured Data - Breadcrumb -->
     <script type="application/ld+json">
@@ -56,11 +56,11 @@
         {"@type":"ListItem","position":1,"name":"4K-Qualität für Baustellen-Zeitraffer: Was Sie wissen müssen","description":"Warum 4K-Auflösung für professionelle Baudokumentation unverzichtbar ist","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-1"},
         {"@type":"ListItem","position":2,"name":"Optimale Intervalleinstellungen für Bauzeitraffer","description":"Von 15-Minuten-Intervallen bis zur Echtzeit-Dokumentation","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-2"},
         {"@type":"ListItem","position":3,"name":"Solar & LTE: Autarke Stromversorgung auf der Baustelle","description":"Moderne Baustellenkameras arbeiten völlig unabhängig vom Stromnetz","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-3"},
-        {"@type":"ListItem","position":4,"name":"DSGVO-konforme Baudokumentation","description":"Was Sie bei der Kameraüberwachung auf Baustellen rechtlich beachten müssen","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-4"},
+        {"@type":"ListItem","position":4,"name":"DSGVO-konforme Baudokumentation: Das müssen Sie beachten","description":"Was Sie bei der Kameraüberwachung auf Baustellen rechtlich beachten müssen","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-4"},
         {"@type":"ListItem","position":5,"name":"Zeitraffer-Marketing für Bauunternehmen","description":"Wie Sie aus Ihrer Baudokumentation beeindruckende Marketing-Inhalte erstellen","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-5"},
         {"@type":"ListItem","position":6,"name":"Der perfekte Kamerastandort: Planungstipps","description":"Worauf Sie bei der Wahl des Kamerastandorts achten sollten","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-6"},
         {"@type":"ListItem","position":7,"name":"Wetterfeste Kameras: IP-Schutzklassen erklärt","description":"Von IP65 bis IP68: Was bedeuten die Schutzklassen","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-7"},
-        {"@type":"ListItem","position":8,"name":"Kosten vs. Nutzen: Lohnt sich eine Baustellenkamera?","description":"Eine realistische Kosten-Nutzen-Rechnung für Baustellenkameras","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-8"}
+        {"@type":"ListItem","position":8,"name":"Was kostet eine Baustellenkamera? Preise und Kostenfaktoren","description":"Mietpreise ab 250 Euro pro Monat: realistische Kostenaufstellung mit allen Preisfaktoren","url":"https://baustellen-timelapse-leipzig.de/ratgeber#artikel-8"}
       ]
     }
     </script>
@@ -443,6 +443,135 @@
             text-align: center;
             color: var(--muted);
         }
+
+        .toc {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .toc h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 2rem;
+        }
+
+        .toc li {
+            counter-increment: toc-counter;
+        }
+
+        .toc li::before {
+            content: counter(toc-counter) ". ";
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .toc a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+        }
+
+        .ratgeber-article {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            scroll-margin-top: 100px;
+        }
+
+        .ratgeber-article h2 {
+            font-size: 1.625rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .ratgeber-article h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+            color: var(--primary);
+        }
+
+        .ratgeber-article p {
+            color: #d4d4d4;
+            margin-bottom: 1rem;
+        }
+
+        .ratgeber-article ul {
+            margin: 0 0 1rem 1.25rem;
+            color: #d4d4d4;
+        }
+
+        .ratgeber-article li {
+            margin-bottom: 0.4rem;
+        }
+
+        .ratgeber-article a {
+            color: var(--primary);
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .ratgeber-article table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9375rem;
+            min-width: 480px;
+        }
+
+        .ratgeber-article th,
+        .ratgeber-article td {
+            border: 1px solid var(--border);
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            color: #d4d4d4;
+        }
+
+        .ratgeber-article th {
+            background: rgba(245, 158, 11, 0.08);
+            color: var(--foreground);
+            font-weight: 600;
+        }
+
+        .article-cta {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+            background: rgba(245, 158, 11, 0.08);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-size: 0.9375rem;
+            color: #d4d4d4;
+        }
+
+        @media (max-width: 640px) {
+            .toc ol {
+                grid-template-columns: 1fr;
+            }
+
+            .ratgeber-article {
+                padding: 1.5rem;
+            }
+        }
         
         @media (max-width: 768px) {
             h1 {
@@ -485,6 +614,12 @@
                         <span class="lang-separator">/</span>
                         <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
                     </div>
+                    <a href="tel:+491781345105" style="color: var(--primary); font-weight: 500; white-space: nowrap;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 0.25rem;">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        0178 134 5105
+                    </a>
                     <a href="/#contact" class="btn" data-i18n="nav_cta">Projekt besprechen</a>
                 </nav>
             </div>
@@ -503,122 +638,490 @@
                 </p>
             </div>
 
-            <!-- Articles Grid -->
-            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; color: var(--foreground);" data-i18n="ratgeber_articles_heading">Artikel & Tipps</h2>
-            <div class="articles-grid">
+            <!-- Table of Contents -->
+            <nav class="toc" aria-label="Inhaltsverzeichnis">
+                <h2>Inhalt: Alle Ratgeber-Artikel im Überblick</h2>
+                <ol>
+                    <li><a href="#artikel-1">4K-Qualität für Baustellen-Zeitraffer: Was Sie wissen müssen</a></li>
+                    <li><a href="#artikel-2">Optimale Intervalleinstellungen für Bauzeitraffer</a></li>
+                    <li><a href="#artikel-3">Solar &amp; LTE: Autarke Stromversorgung auf der Baustelle</a></li>
+                    <li><a href="#artikel-4">DSGVO-konforme Baudokumentation: Das müssen Sie beachten</a></li>
+                    <li><a href="#artikel-5">Zeitraffer-Marketing für Bauunternehmen</a></li>
+                    <li><a href="#artikel-6">Der perfekte Kamerastandort: Planungstipps</a></li>
+                    <li><a href="#artikel-7">Wetterfeste Kameras: IP-Schutzklassen erklärt</a></li>
+                    <li><a href="#artikel-8">Was kostet eine Baustellenkamera? Preise und Kostenfaktoren</a></li>
+                </ol>
+            </nav>
+
+            <!-- Articles -->
+            <div class="articles-list">
                 <!-- Article 1 -->
-                <div class="article-card" id="artikel-1">
+                <article class="ratgeber-article" id="artikel-1">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_tech">Technik</span>
-                        <span class="article-time">⏱️ 5 Min.</span>
+                        <span class="article-category">Technik</span>
+                        <span class="article-time">Lesezeit: ca. 2 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a1_title">4K-Qualität für Baustellen-Zeitraffer: Was Sie wissen müssen</h3>
-                    <p data-i18n="ratgeber_a1_desc">
-                        Erfahren Sie, warum 4K-Auflösung für professionelle Baudokumentation unverzichtbar ist
-                        und welche technischen Anforderungen erfüllt sein müssen.
+                    <h2>4K-Qualität für Baustellen-Zeitraffer: Was Sie wissen müssen</h2>
+                    <p>
+                        Ein Zeitraffer über 18 Monate Bauzeit besteht schnell aus 25.000 bis 50.000 Einzelbildern.
+                        Ob dieses Material später als Beweisdokumentation, Imagefilm oder Social-Media-Clip taugt,
+                        entscheidet sich am ersten Tag: mit der Auflösung der Kamera. Nachträglich lässt sich
+                        Bildqualität nicht mehr herstellen.
                     </p>
-                </div>
+                    <h3>Warum 4K der sinnvolle Standard ist</h3>
+                    <p>
+                        4K bedeutet 3840 × 2160 Pixel – viermal so viele Bildpunkte wie Full HD. Für die
+                        Baudokumentation heißt das konkret: Sie können in der Nachbearbeitung digital zoomen,
+                        Bildausschnitte für Hochformat-Clips (Instagram, TikTok) herausschneiden und trotzdem in
+                        Full HD ausspielen. Bei einer Full-HD-Kamera ist dieser Spielraum aufgebraucht, bevor er
+                        anfängt.
+                    </p>
+                    <p>
+                        Auch für die Beweissicherung zählt jedes Pixel: Auf einem 4K-Standbild erkennen Sie
+                        Details wie Bewehrungslagen, Gerüstverankerungen oder den Zustand einer Schalung noch aus
+                        30 bis 50 Metern Entfernung – bei Full HD verschwimmt genau das.
+                    </p>
+                    <h3>Worauf Sie neben der Auflösung achten sollten</h3>
+                    <ul>
+                        <li><strong>Sensorgröße und Optik:</strong> Ein guter Sensor mit lichtstarkem Objektiv liefert auch bei Dämmerung und Gegenlicht saubere Bilder – wichtiger als reine Megapixel-Zahlen.</li>
+                        <li><strong>HDR / Belichtungsautomatik:</strong> Baustellen haben harte Kontraste (heller Himmel, dunkle Baugrube). Automatische Belichtungskorrektur verhindert ausgefressene oder abgesoffene Bereiche.</li>
+                        <li><strong>Fester Bildausschnitt:</strong> Die Kamera muss über Monate absolut stabil montiert sein. Schon 1–2 Grad Verschiebung ruinieren den Zeitraffer-Effekt.</li>
+                        <li><strong>Datenübertragung:</strong> 4K-Bilder sind 3–8 MB groß. Die Kamera braucht LTE mit ausreichendem Datenvolumen und Cloud-Anbindung, damit nichts lokal verloren geht.</li>
+                    </ul>
+                    <h3>Wie viel Speicher entsteht wirklich?</h3>
+                    <p>
+                        Rechenbeispiel: Ein Bild alle 10 Minuten, 10 Stunden Tageslicht, 6 Tage pro Woche ergibt
+                        rund 1.550 Bilder im Monat – bei 4K etwa 8–12 GB. Über ein Jahr kommen so 100–150 GB
+                        zusammen. Professionelle Anbieter übernehmen Speicherung und Backup in der Cloud, sodass
+                        Sie sich um SD-Karten und Festplatten nicht kümmern müssen und jederzeit per Browser auf
+                        alle Aufnahmen zugreifen können.
+                    </p>
+                    <p>
+                        Unser Fazit: Wer eine Baustellenkamera für mehr als reine Live-Ansicht nutzen will,
+                        sollte 4K als Mindeststandard setzen. Der Preisunterschied zur Full-HD-Technik ist
+                        gering, der Qualitätsunterschied im fertigen Film enorm – und er bleibt es: Ein
+                        4K-Zeitraffer sieht auch in fünf Jahren auf jedem Bildschirm noch professionell aus.
+                    </p>
+                    <p class="article-cta">
+                        Sie möchten sehen, wie 4K-Material aus Leipzig aussieht? Rufen Sie uns an unter
+                        <a href="tel:+491781345105">0178 134 5105</a> – wir zeigen Ihnen Beispielaufnahmen aus echten Projekten.
+                    </p>
+                </article>
 
                 <!-- Article 2 -->
-                <div class="article-card" id="artikel-2">
+                <article class="ratgeber-article" id="artikel-2">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_tech">Technik</span>
-                        <span class="article-time">⏱️ 4 Min.</span>
+                        <span class="article-category">Technik</span>
+                        <span class="article-time">Lesezeit: ca. 2 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a2_title">Optimale Intervalleinstellungen für Bauzeitraffer</h3>
-                    <p data-i18n="ratgeber_a2_desc">
-                        Von 15-Minuten-Intervallen bis zur Echtzeit-Dokumentation: Wie Sie die richtige
-                        Aufnahmefrequenz für Ihr Projekt wählen.
+                    <h2>Optimale Intervalleinstellungen für Bauzeitraffer</h2>
+                    <p>
+                        Das Aufnahmeintervall – also der Abstand zwischen zwei Fotos – ist die wichtigste
+                        Einstellung Ihrer Baustellenkamera. Es bestimmt, wie flüssig der fertige Zeitraffer
+                        wirkt, wie viel Datenvolumen anfällt und ob wichtige Bauphasen lückenlos dokumentiert
+                        sind.
                     </p>
-                </div>
+                    <h3>Die Faustregel: Bauzeit bestimmt das Intervall</h3>
+                    <ul>
+                        <li><strong>Projekte über 12 Monate</strong> (Rohbau, Hochbau): 10–15 Minuten. Ergibt genug Material für einen 2–3-minütigen Film und hält die Datenmenge im Rahmen.</li>
+                        <li><strong>Projekte von 3–12 Monaten</strong> (Sanierung, Hallenbau): 5–10 Minuten. Der Baufortschritt ist schneller sichtbar, das Intervall sollte mithalten.</li>
+                        <li><strong>Kurze, dynamische Phasen</strong> (Kranmontage, Betonage, Richtfest, Abriss): 30 Sekunden bis 2 Minuten. Nur so wirken Bewegungen im Film flüssig statt sprunghaft.</li>
+                    </ul>
+                    <h3>Rechenbeispiel: Vom Intervall zur Filmlänge</h3>
+                    <p>
+                        Ein Zeitrafferfilm läuft üblicherweise mit 25 Bildern pro Sekunde. Bei einem
+                        10-Minuten-Intervall und 10 Stunden Tageslicht entstehen 60 Bilder pro Tag. Nach 12
+                        Monaten (ca. 300 Baustellentage) haben Sie 18.000 Bilder – das ergibt 12 Minuten
+                        Rohmaterial. Daraus schneidet die Postproduktion einen dichten Film von 2–3 Minuten, in
+                        dem jede Bauphase sichtbar bleibt.
+                    </p>
+                    <p>
+                        Umgekehrt gilt: Wer nur alle 60 Minuten fotografiert, bekommt nach einem Jahr gerade
+                        einmal 2 Minuten Rohmaterial – zu wenig, um Wetterstimmungen, Kranbewegungen und
+                        Tagesabläufe erlebbar zu machen.
+                    </p>
+                    <p>
+                        Für die Beweissicherung gilt eine andere Logik als für den Film: Hier zählt nicht die
+                        Flüssigkeit der Bewegung, sondern die Nachvollziehbarkeit einzelner Bautage. Ein
+                        10-Minuten-Intervall dokumentiert lückenlos, welche Gewerke wann gearbeitet haben, wann
+                        Material angeliefert wurde und wie das Wetter zum Zeitpunkt einer strittigen Leistung
+                        war – ein Argument, das bei Nachtragsverhandlungen bares Geld wert sein kann.
+                    </p>
+                    <h3>Praxis-Tipps aus unseren Leipziger Projekten</h3>
+                    <ul>
+                        <li>Aufnahmezeit auf die Arbeitszeit begrenzen (z. B. 6–20 Uhr) – Nachtbilder ohne Aktivität blähen nur die Datenmenge auf.</li>
+                        <li>Das Intervall sollte sich per Fernzugriff anpassen lassen. Vor einer Großbetonage kurz auf 1 Minute stellen, danach zurück – ohne Anfahrt zur Baustelle.</li>
+                        <li>Wochenenden nicht komplett abschalten: Ein Bild pro Stunde dokumentiert Wetterereignisse und den Zustand der Baustelle – wertvoll bei Schadensfällen.</li>
+                        <li>Lieber ein Intervall zu kurz als zu lang wählen. Bilder auszudünnen ist im Schnitt einfach, fehlende Bilder lassen sich nie nachholen.</li>
+                    </ul>
+                    <p class="article-cta">
+                        Unsicher, welches Intervall zu Ihrem Bauablauf passt? In unserem
+                        <a href="/baustellenkamera-mieten-leipzig">Mietangebot für Leipzig</a> ist die Intervall-Beratung und Fernanpassung bereits enthalten.
+                    </p>
+                </article>
 
                 <!-- Article 3 -->
-                <div class="article-card" id="artikel-3">
+                <article class="ratgeber-article" id="artikel-3">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_tech">Technik</span>
-                        <span class="article-time">⏱️ 6 Min.</span>
+                        <span class="article-category">Technik</span>
+                        <span class="article-time">Lesezeit: ca. 2 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a3_title">Solar & LTE: Autarke Stromversorgung auf der Baustelle</h3>
-                    <p data-i18n="ratgeber_a3_desc">
-                        Moderne Baustellenkameras arbeiten völlig unabhängig vom Stromnetz.
-                        Wir erklären die Technologie dahinter.
+                    <h2>Solar &amp; LTE: Autarke Stromversorgung auf der Baustelle</h2>
+                    <p>
+                        Die häufigste Frage vor der Kamerainstallation lautet: „Wo bekommen wir Strom und
+                        Internet her?" Die gute Nachricht: Moderne Baustellenkameras brauchen oft weder das eine
+                        noch das andere von der Baustelle. Solarpanel und LTE-Modem machen die Kamera komplett
+                        autark.
                     </p>
-                </div>
+                    <h3>Wie eine autarke Baustellenkamera funktioniert</h3>
+                    <p>
+                        Das System besteht aus drei Komponenten: einem Solarpanel (typisch 50–100 Watt), einem
+                        Pufferakku für Nächte und trübe Tage sowie einem LTE-Modem, das jedes Bild sofort in die
+                        Cloud überträgt. Eine sparsame Zeitraffer-Kamera verbraucht nur wenige Watt – der Akku
+                        überbrückt damit auch eine dunkle Novemberwoche in Sachsen problemlos.
+                    </p>
+                    <p>
+                        Die LTE-Übertragung hat einen entscheidenden Nebeneffekt: Selbst wenn die Kamera
+                        beschädigt oder gestohlen wird, sind alle Aufnahmen bereits gesichert. Bei Kameras mit
+                        reiner SD-Karten-Speicherung ist im Schadensfall die komplette Dokumentation verloren.
+                    </p>
+                    <h3>Wann Solar sinnvoll ist – und wann Baustrom</h3>
+                    <ul>
+                        <li><strong>Solar ideal:</strong> Kamera auf Mast oder Container am Baufeldrand, kein Stromanschluss in der Nähe, lange Projektlaufzeit, freie Südausrichtung möglich.</li>
+                        <li><strong>Baustrom besser:</strong> Montage direkt am Kran oder Gerüst mit vorhandener Verteilung, stark verschatteter Standort, sehr kurze Aufnahmeintervalle mit hohem Energiebedarf.</li>
+                        <li><strong>Hybrid:</strong> Baustrom als Hauptversorgung, Akku als Puffer – so übersteht die Kamera auch die auf Baustellen üblichen Stromabschaltungen am Wochenende ohne Lücke.</li>
+                    </ul>
+                    <h3>Checkliste vor der Installation</h3>
+                    <ul>
+                        <li>LTE-Empfang am Standort prüfen (in Leipzig und Umland fast überall gegeben, in Tallagen oder zwischen Hochhäusern vorab testen).</li>
+                        <li>Solarpanel nach Süden ausrichten, Verschattung durch den wachsenden Rohbau über die Bauzeit mitdenken.</li>
+                        <li>Panel und Kamera außerhalb der Reichweite von Radladern, Kranlasten und neugierigen Händen montieren (ab ca. 3,5 m Höhe).</li>
+                        <li>Winterbetrieb klären: Ein zu klein dimensionierter Akku ist die häufigste Ursache für Dokumentationslücken im Dezember und Januar.</li>
+                    </ul>
+                    <p>
+                        Richtig geplant, läuft eine autarke Kamera monatelang wartungsfrei – ohne Kabel, ohne
+                        Elektriker, ohne Abstimmung mit der Bauleitung über Stromkreise. Das spart nicht nur
+                        Installationskosten, sondern auch Zeit im Bauablauf: Die Kamera kann schon am Tag des
+                        ersten Aushubs stehen, bevor Baustrom überhaupt beantragt ist. Und beim Rückbau ist sie
+                        in einer Stunde demontiert – ohne dass ein Elektriker Leitungen zurückbauen muss.
+                    </p>
+                    <p class="article-cta">
+                        Unser Team installiert autarke Solar-Kameras in Leipzig und im Umkreis von 120 km –
+                        <a href="tel:+491781345105">rufen Sie an</a>, wir prüfen Ihren Standort kostenlos.
+                    </p>
+                </article>
 
                 <!-- Article 4 -->
-                <div class="article-card" id="artikel-4">
+                <article class="ratgeber-article" id="artikel-4">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_law">Recht</span>
-                        <span class="article-time">⏱️ 7 Min.</span>
+                        <span class="article-category">Recht</span>
+                        <span class="article-time">Lesezeit: ca. 3 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a4_title">DSGVO-konforme Baudokumentation</h3>
-                    <p data-i18n="ratgeber_a4_desc">
-                        Was Sie bei der Kameraüberwachung auf Baustellen rechtlich beachten müssen –
-                        vom Datenschutz bis zur Kennzeichnungspflicht.
+                    <h2>DSGVO-konforme Baudokumentation: Das müssen Sie beachten</h2>
+                    <p>
+                        Eine Baustellenkamera fotografiert zwangsläufig auch Menschen: Bauarbeiter, Lieferanten,
+                        Passanten. Damit fällt die Baudokumentation unter die DSGVO – und wer sie ignoriert,
+                        riskiert Abmahnungen, Bußgelder und im schlimmsten Fall ein Verwertungsverbot für das
+                        gesamte Bildmaterial. Die gute Nachricht: DSGVO-konforme Baudokumentation ist mit
+                        wenigen, klaren Maßnahmen erreichbar.
                     </p>
-                </div>
+                    <h3>Die Rechtsgrundlage: Berechtigtes Interesse</h3>
+                    <p>
+                        Grundlage der Verarbeitung ist in der Regel Art. 6 Abs. 1 lit. f DSGVO – das berechtigte
+                        Interesse des Bauherrn an Baufortschrittsdokumentation, Beweissicherung und
+                        Diebstahlprävention. Entscheidend ist die Verhältnismäßigkeit: Die Kamera dokumentiert
+                        die Baustelle, nicht die Beschäftigten. Eine dauerhafte Verhaltens- oder
+                        Leistungskontrolle einzelner Arbeiter ist unzulässig und kann den Betriebsrat auf den
+                        Plan rufen.
+                    </p>
+                    <h3>Die fünf Pflichten in der Praxis</h3>
+                    <ul>
+                        <li><strong>1. Kennzeichnung:</strong> Gut sichtbare Hinweisschilder an allen Zugängen zur Baustelle – mit Verantwortlichem, Zweck, Rechtsgrundlage und Kontaktdaten (Art. 13 DSGVO).</li>
+                        <li><strong>2. Weitwinkel statt Zoom:</strong> Das Aufnahmeintervall (z. B. alle 10 Minuten) und die Totale-Perspektive sorgen dafür, dass Personen klein und nicht identifizierbar im Bild erscheinen. Keine Schwenks, kein Heranzoomen auf Personen.</li>
+                        <li><strong>3. Öffentlichen Raum ausblenden:</strong> Gehwege, Straßen und Nachbargrundstücke dürfen nicht miterfasst werden. Professionelle Systeme maskieren diese Bereiche dauerhaft per Software (Privacy Masking).</li>
+                        <li><strong>4. Verzeichnis und Information:</strong> Die Kamera gehört ins Verzeichnis der Verarbeitungstätigkeiten; die auf der Baustelle tätigen Firmen werden über die Dokumentation informiert – am einfachsten über die Baustellenordnung.</li>
+                        <li><strong>5. Auftragsverarbeitung regeln:</strong> Speichert ein Dienstleister die Bilder in der Cloud, brauchen Sie einen AV-Vertrag nach Art. 28 DSGVO. Seriöse Anbieter legen diesen unaufgefordert vor.</li>
+                    </ul>
+                    <h3>Speicherdauer und Löschkonzept</h3>
+                    <p>
+                        Für die reine Zeitraffer-Dokumentation dürfen die Bilder über die gesamte Bauzeit und
+                        für die Gewährleistungsfristen (bis zu 5 Jahre nach VOB/BGB) aufbewahrt werden – das
+                        berechtigte Interesse an der Beweissicherung trägt diese Frist. Definieren Sie trotzdem
+                        von Anfang an, wann welche Daten gelöscht werden, und halten Sie das schriftlich fest.
+                    </p>
+                    <p>
+                        Wichtig für Leipzig und Sachsen: Zuständige Aufsichtsbehörde ist der Sächsische
+                        Datenschutzbeauftragte. Bei Beschwerden von Anwohnern ist eine saubere Dokumentation
+                        Ihrer Maßnahmen (Schilder, Masken, AV-Vertrag) Ihre beste Verteidigung – und meist
+                        auch das schnellste Ende des Verfahrens.
+                    </p>
+                    <p class="article-cta">
+                        Bei unseren Mietkameras sind Privacy Masking, Hinweisschilder und AV-Vertrag bereits
+                        Teil des Pakets – Details unter <a href="/baustellenkamera-mieten-leipzig">Baustellenkamera mieten in Leipzig</a>.
+                    </p>
+                </article>
 
                 <!-- Article 5 -->
-                <div class="article-card" id="artikel-5">
+                <article class="ratgeber-article" id="artikel-5">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_marketing">Marketing</span>
-                        <span class="article-time">⏱️ 5 Min.</span>
+                        <span class="article-category">Marketing</span>
+                        <span class="article-time">Lesezeit: ca. 2 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a5_title">Zeitraffer-Marketing für Bauunternehmen</h3>
-                    <p data-i18n="ratgeber_a5_desc">
-                        Wie Sie aus Ihrer Baudokumentation beeindruckende Marketing-Inhalte für
-                        Social Media und Website erstellen.
+                    <h2>Zeitraffer-Marketing für Bauunternehmen</h2>
+                    <p>
+                        Die meisten Bauunternehmen installieren eine Baustellenkamera zur Dokumentation – und
+                        übersehen, dass dabei nebenbei ihr stärkstes Marketingmaterial entsteht. Ein Gebäude,
+                        das in 60 Sekunden aus dem Boden wächst, erzählt mehr über Ihre Leistungsfähigkeit als
+                        jede Imagebroschüre. Und anders als klassische Werbeproduktionen entsteht dieses
+                        Material ohne zusätzlichen Drehtag: Die Kamera hängt ohnehin, das Team arbeitet ohnehin
+                        – Sie müssen die Aufnahmen nur nutzen.
                     </p>
-                </div>
+                    <h3>Welche Formate wirklich funktionieren</h3>
+                    <ul>
+                        <li><strong>Der Projektfilm (2–3 Minuten):</strong> Kompletter Bauablauf mit Musik, Bauphasen-Einblendungen und Firmenlogo. Einsatz: Website-Referenzen, Messen, Angebotsunterlagen, Richtfest und Einweihung.</li>
+                        <li><strong>Social-Media-Clips (15–30 Sekunden):</strong> Einzelne Highlights – die Kranmontage, das erste Geschoss, der Dachstuhl. Im Hochformat geschnitten laufen sie auf Instagram Reels, TikTok und LinkedIn. Aus einem Jahr Bauzeit lassen sich 10–15 solcher Clips ziehen.</li>
+                        <li><strong>Monatliche Fortschritts-Updates:</strong> 20-Sekunden-Zusammenschnitte für Bautafel-QR-Code, Newsletter an Käufer oder den Bauherren-Report. Gerade Projektentwickler nutzen das, um Erwerber während der Bauzeit bei Laune zu halten.</li>
+                        <li><strong>Vorher-Nachher-Standbilder:</strong> Zwei 4K-Fotos nebeneinander – das einfachste Format mit der höchsten Wirkung in Präsentationen und Ausschreibungsunterlagen.</li>
+                    </ul>
+                    <h3>Vom Rohmaterial zum fertigen Clip</h3>
+                    <p>
+                        Der Unterschied zwischen einer Bilderfolge und einem Film entsteht in der
+                        Postproduktion: Ausschuss entfernen (Regentage, Nebel, Stillstand), Belichtung über
+                        Tausende Bilder angleichen (De-Flickering), Bildstabilisierung, Farbkorrektur, Schnitt
+                        auf Musik. Planen Sie dafür je nach Umfang 1–2 Wochen nach Bauende ein – oder lassen Sie
+                        Zwischenstände bereits während der Bauzeit produzieren – dann liegt der fertige
+                        Imagefilm schon zur Schlüsselübergabe vor.
+                    </p>
+                    <h3>Drei Praxis-Tipps</h3>
+                    <ul>
+                        <li>Klären Sie die Nutzungsrechte am Material vertraglich, bevor die Kamera montiert wird – inklusive Social-Media-Nutzung durch Subunternehmer und Bauherr.</li>
+                        <li>Posten Sie während der Bauzeit, nicht erst danach. Ein laufendes Projekt erzeugt Wiedererkennung („das Gebäude an der B2 – das baut ihr?").</li>
+                        <li>Versehen Sie jeden Clip mit Projektname und Standort – lokale Sichtbarkeit ist für Bauunternehmen wertvoller als virale Reichweite.</li>
+                    </ul>
+                    <p>
+                        Auch für die Personalgewinnung funktioniert das Material: Bewerber im Baugewerbe wollen
+                        sehen, an welchen Projekten sie arbeiten würden. Ein Zeitraffer auf der Karriereseite
+                        zeigt das glaubwürdiger als jedes Stockfoto – und kostet nichts extra, weil das Material
+                        durch die laufende Baudokumentation ohnehin bereits vorhanden ist.
+                    </p>
+                    <p class="article-cta">
+                        Wir produzieren aus Ihrem Kameramaterial fertige Filme und Social-Media-Pakete –
+                        <a href="tel:+491781345105">0178 134 5105</a> anrufen und Beispiele ansehen.
+                    </p>
+                </article>
 
                 <!-- Article 6 -->
-                <div class="article-card" id="artikel-6">
+                <article class="ratgeber-article" id="artikel-6">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_planning">Planung</span>
-                        <span class="article-time">⏱️ 8 Min.</span>
+                        <span class="article-category">Planung</span>
+                        <span class="article-time">Lesezeit: ca. 3 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a6_title">Der perfekte Kamerastandort: Planungstipps</h3>
-                    <p data-i18n="ratgeber_a6_desc">
-                        Worauf Sie bei der Wahl des Kamerastandorts achten sollten – von der Perspektive
-                        über Lichtverhältnisse bis zur Sicherheit.
+                    <h2>Der perfekte Kamerastandort: Planungstipps</h2>
+                    <p>
+                        Der Kamerastandort ist die eine Entscheidung, die Sie später nicht korrigieren können.
+                        Wird die Kamera nach drei Monaten versetzt, ist der Zeitraffer gebrochen – der Bildsprung
+                        bleibt im Film für immer sichtbar. Investieren Sie deshalb vor der Montage eine Stunde in
+                        die Standortwahl.
                     </p>
-                </div>
+                    <h3>Perspektive: Von schräg oben auf die Hauptfassade</h3>
+                    <p>
+                        Die bewährte Position liegt diagonal zur Baustelle, mit Blick auf die spätere
+                        Hauptansicht des Gebäudes, aus 8–25 Metern Höhe. Von schräg oben bleibt die Baugrube
+                        ebenso sichtbar wie später die Fassade – eine ebenerdige Kamera „ertrinkt" dagegen ab dem
+                        zweiten Geschoss im Bauzaun. Geeignete Montagepunkte: Nachbargebäude (Dach oder Fassade,
+                        mit schriftlicher Gestattung des Eigentümers), eigener Mast am Baufeldrand, Kranturm oder
+                        ein hoher Container-Stapel.
+                    </p>
+                    <h3>Das Endgebäude mitdenken</h3>
+                    <p>
+                        Der häufigste Planungsfehler: Der Standort passt zur Baugrube, aber nicht zum fertigen
+                        Rohbau. Prüfen Sie anhand der Planunterlagen, ob das Gebäude in voller Höhe und Breite im
+                        Bildausschnitt bleibt – inklusive Kran. Faustregel: Das fertige Gebäude sollte maximal
+                        zwei Drittel der Bildhöhe einnehmen, damit Himmel und Kranbewegungen dem Film Dynamik
+                        geben.
+                    </p>
+                    <h3>Licht: Die Sonne im Rücken</h3>
+                    <p>
+                        Ideal ist eine Kamera, die nach Norden oder Nordosten blickt – dann steht die Sonne nie
+                        direkt im Objektiv. Ist das nicht möglich, wählen Sie West- vor Ostausrichtung: Gegenlicht
+                        am Morgen betrifft weniger Arbeitsstunden als am Nachmittag. Reines Südlicht ins Objektiv
+                        erzeugt monatelang Blendflecken, die keine Nachbearbeitung vollständig entfernt.
+                    </p>
+                    <h3>Checkliste vor der Montage</h3>
+                    <ul>
+                        <li>Bleibt die Sichtachse über die gesamte Bauzeit frei (Gerüst, Kran, Materiallager, wachsende Bäume)?</li>
+                        <li>Ist der Montagepunkt vibrationsarm? Ein schwankender Mast erzeugt Unschärfe bei jedem Windstoß.</li>
+                        <li>Erfasst der Bildausschnitt keine öffentlichen Wege oder Nachbarfenster (DSGVO – sonst Privacy Masking einplanen)?</li>
+                        <li>Ist die Kamera vor Vandalismus und Kranlasten geschützt (Höhe ab 3,5 m, nicht im Schwenkbereich)?</li>
+                        <li>Gibt es LTE-Empfang und – bei Solarbetrieb – ausreichend Sonne am Montagepunkt?</li>
+                        <li>Liegt die Gestattung des Grundstücks- oder Gebäudeeigentümers schriftlich vor?</li>
+                    </ul>
+                    <p>
+                        Bei größeren Projekten lohnt sich eine zweite Kamera aus einer anderen Perspektive – zum
+                        Beispiel eine Totale vom Nachbargebäude plus eine Detailkamera am Kran. Die Mehrkosten
+                        sind überschaubar, im fertigen Film sorgt der Perspektivwechsel für deutlich mehr
+                        Dynamik, und bei der Beweissicherung deckt die zweite Achse tote Winkel ab.
+                    </p>
+                    <p class="article-cta">
+                        Wir übernehmen die Standortanalyse vor Ort in Leipzig und Umgebung –
+                        <a href="tel:+491781345105">kurz anrufen</a>, Termin machen, fertig.
+                    </p>
+                </article>
 
                 <!-- Article 7 -->
-                <div class="article-card" id="artikel-7">
+                <article class="ratgeber-article" id="artikel-7">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_tech">Technik</span>
-                        <span class="article-time">⏱️ 6 Min.</span>
+                        <span class="article-category">Technik</span>
+                        <span class="article-time">Lesezeit: ca. 2 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a7_title">Wetterfeste Kameras: IP-Schutzklassen erklärt</h3>
-                    <p data-i18n="ratgeber_a7_desc">
-                        Von IP65 bis IP68: Was bedeuten die Schutzklassen und welche brauchen Sie
-                        wirklich auf der Baustelle?
+                    <h2>Wetterfeste Kameras: IP-Schutzklassen erklärt</h2>
+                    <p>
+                        Eine Baustellenkamera hängt 12 bis 36 Monate im Freien: Schlagregen, Baustaub, Frost,
+                        pralle Sommersonne. Ob sie das übersteht, verrät die IP-Schutzklasse – zwei Ziffern, die
+                        oft missverstanden werden.
                     </p>
-                </div>
+                    <h3>Was die beiden Ziffern bedeuten</h3>
+                    <p>
+                        Die erste Ziffer beschreibt den Schutz gegen Fremdkörper und Staub (0–6), die zweite den
+                        Schutz gegen Wasser (0–9). Ein Beispiel: IP66 heißt „staubdicht" (6) und „geschützt gegen
+                        starkes Strahlwasser" (6). Wichtig zu wissen: Die Wasserskala ist keine einfache
+                        Rangfolge. IP67/IP68 bedeuten Schutz beim Untertauchen – sagen aber nichts über
+                        Strahlwasser aus. Für Baustellen ist Schlagregen und Spritzwasser das reale Szenario, und
+                        genau dafür steht die 6 an zweiter Stelle – nicht die vermeintlich „höhere" 7 oder 8.
+                    </p>
+                    <h3>Welche Klasse braucht eine Baustellenkamera?</h3>
+                    <ul>
+                        <li><strong>IP54:</strong> Innenbereich oder überdachte Montage – für den Dauereinsatz im Freien zu wenig.</li>
+                        <li><strong>IP65:</strong> Untere Grenze für Außeneinsatz; bei exponierter Montage (Mast, Kran) auf Dauer riskant.</li>
+                        <li><strong>IP66:</strong> Der Profi-Standard für Baustellenkameras. Staubdicht und sicher gegen Schlagregen aus allen Richtungen – auch bei Sturm auf einem 20-Meter-Mast.</li>
+                        <li><strong>IP67/IP68:</strong> Für Kameras unnötig – kein Gehäuse auf der Baustelle muss tauchfest sein. Bezahlen Sie diesen Aufpreis nicht.</li>
+                    </ul>
+                    <h3>Was die IP-Klasse nicht abdeckt</h3>
+                    <p>
+                        Drei Punkte entscheiden ebenfalls über den Ganzjahresbetrieb, stehen aber in keiner
+                        IP-Norm:
+                    </p>
+                    <ul>
+                        <li><strong>Temperaturbereich:</strong> In Sachsen sind −15 °C im Winter und über +35 °C im Gehäuse im Sommer realistisch. Das Datenblatt sollte mindestens −20 °C bis +50 °C ausweisen.</li>
+                        <li><strong>Kondensation:</strong> Temperaturwechsel erzeugen Feuchtigkeit im Gehäuse. Membranventile oder Trockenmittel verhindern beschlagene Linsen an kalten Morgen.</li>
+                        <li><strong>Scheibenverschmutzung:</strong> Baustaub und Regenspuren auf der Frontscheibe sind die häufigste Ursache schlechter Bilder – nicht die Elektronik. Ein kleines Schutzdach über der Kamera reduziert die Reinigungsintervalle deutlich; bei Mietsystemen mit Wartung ist die Reinigung Sache des Anbieters.</li>
+                    </ul>
+                    <p>
+                        Kurz gesagt: IP66 plus erweiterter Temperaturbereich plus Wartungskonzept – dann läuft
+                        die Kamera vom ersten Aushub bis zur Schlüsselübergabe durch. Fragen Sie beim Anbieter
+                        außerdem nach, wie ein Ausfall bemerkt wird: Professionelle Systeme melden sich selbst,
+                        wenn Bilder ausbleiben, statt dass die Lücke erst Wochen später beim Sichten des
+                        Materials auffällt.
+                    </p>
+                    <p class="article-cta">
+                        Unsere Mietkameras sind IP66-geschützt und werden von unserem Leipziger Team gewartet –
+                        alle Details unter <a href="/baustellenkamera-mieten-leipzig">Miete &amp; Preise</a>.
+                    </p>
+                </article>
 
                 <!-- Article 8 -->
-                <div class="article-card" id="artikel-8">
+                <article class="ratgeber-article" id="artikel-8">
                     <div class="article-meta">
-                        <span class="article-category" data-i18n="ratgeber_cat_planning">Planung</span>
-                        <span class="article-time">⏱️ 5 Min.</span>
+                        <span class="article-category">Planung</span>
+                        <span class="article-time">Lesezeit: ca. 3 Min.</span>
                     </div>
-                    <h3 data-i18n="ratgeber_a8_title">Kosten vs. Nutzen: Lohnt sich eine Baustellenkamera?</h3>
-                    <p data-i18n="ratgeber_a8_desc">
-                        Eine realistische Kosten-Nutzen-Rechnung für Baustellenkameras –
-                        von der Überwachung bis zum Marketing-ROI.
+                    <h2>Was kostet eine Baustellenkamera? Preise und Kostenfaktoren</h2>
+                    <p>
+                        Die kurze Antwort: Eine professionelle Baustellenkamera zur Miete kostet ab 250 € pro
+                        Monat. Die ehrliche Antwort: Der Endpreis hängt von vier Faktoren ab – Laufzeit,
+                        Update-Frequenz, Montageaufwand und Stromversorgung. Hier ist die Aufstellung, die Ihnen
+                        die meisten Anbieter erst im Angebot zeigen.
                     </p>
-                </div>
+                    <h3>Kostenübersicht: Miete einer 4K-Baustellenkamera</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Typische Kosten</th>
+                                    <th>Was den Preis beeinflusst</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kameramiete (4K, LTE, IP66, Cloud)</td>
+                                    <td>ab 250 €/Monat</td>
+                                    <td>Laufzeit: Bei 12+ Monaten sinkt der Monatspreis spürbar gegenüber 3-Monats-Projekten</td>
+                                </tr>
+                                <tr>
+                                    <td>Update-Frequenz / Datenpaket</td>
+                                    <td>meist inklusive, sonst 20–50 €/Monat</td>
+                                    <td>Kurze Intervalle (unter 5 Min.) und Live-Ansicht erhöhen Datenvolumen und Cloud-Speicher</td>
+                                </tr>
+                                <tr>
+                                    <td>Montage und Demontage</td>
+                                    <td>einmalig 150–600 €</td>
+                                    <td>Einfache Container-Montage vs. Mast, Hubarbeitsbühne oder Kranmontage in großer Höhe</td>
+                                </tr>
+                                <tr>
+                                    <td>Stromversorgung</td>
+                                    <td>0–40 €/Monat Aufpreis</td>
+                                    <td>Baustrom vorhanden = günstigste Lösung; autarkes Solar-Set kostet Aufpreis, spart aber den Elektriker</td>
+                                </tr>
+                                <tr>
+                                    <td>Zeitrafferfilm (Postproduktion)</td>
+                                    <td>einmalig, projektabhängig</td>
+                                    <td>Filmlänge, Anzahl der Schnittfassungen, Social-Media-Formate, Musik-Lizenzen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Rechenbeispiel: 12 Monate Rohbau in Leipzig</h3>
+                    <p>
+                        Ein typisches Projekt – 12 Monate Laufzeit, Montage am Mast, Baustrom vorhanden,
+                        10-Minuten-Intervall: rund 3.000 € Kameramiete plus einmalige Montagekosten. Verteilt auf
+                        die Bausumme eines mittleren Wohnbauprojekts liegt die komplette Dokumentation damit
+                        deutlich unter 0,1 % der Baukosten.
+                    </p>
+                    <h3>Mieten oder kaufen?</h3>
+                    <p>
+                        Kaufsysteme in vergleichbarer Qualität kosten 2.500–6.000 € – plus SIM-Vertrag,
+                        Cloud-Gebühren, Versicherung und Ihre Arbeitszeit bei jedem Ausfall. Die Miete rechnet
+                        sich fast immer, wenn Sie weniger als zwei bis drei Baustellen gleichzeitig dokumentieren:
+                        Wartung, Ersatzgeräte, DSGVO-Ausstattung und Support sind eingepreist, und nach
+                        Projektende haben Sie keine veraltete Technik im Lager.
+                    </p>
+                    <h3>Woran Sie ein seriöses Angebot erkennen</h3>
+                    <ul>
+                        <li>Monatspreis inklusive LTE-Datenvolumen und Cloud-Speicher – ohne versteckte Traffic-Kosten.</li>
+                        <li>Ersatzgerät bei Defekt innerhalb weniger Werktage, ohne Zusatzkosten.</li>
+                        <li>DSGVO-Paket (Privacy Masking, Hinweisschilder, AV-Vertrag) enthalten.</li>
+                        <li>Alle Bildrechte und Rohdaten gehören Ihnen – auch nach Vertragsende.</li>
+                    </ul>
+                    <p>
+                        Ein letzter Tipp zum Timing: Fragen Sie das Angebot an, sobald der Baubeginn feststeht –
+                        nicht erst in der Woche des ersten Aushubs. Die ersten Bautage (Baugrube, Kranstellung)
+                        sind im fertigen Film die spektakulärsten Momente, und eine Kamera, die zwei Wochen zu
+                        spät montiert wird, holt diese Bilder nie wieder auf.
+                    </p>
+                    <p class="article-cta">
+                        Konkrete Zahlen für Ihr Projekt? <a href="tel:+491781345105">0178 134 5105</a> anrufen
+                        oder direkt die Preise unter <a href="/baustellenkamera-mieten-leipzig">Baustellenkamera mieten Leipzig</a> ansehen – Angebot am selben Tag.
+                    </p>
+                </article>
 
             </div>
 
             <!-- CTA Section -->
             <div class="cta-section">
-                <h2 data-i18n="ratgeber_cta_title">Noch Fragen?</h2>
-                <p data-i18n="ratgeber_cta_desc">
-                    Unser Team berät Sie gerne zu allen Themen rund um Baudokumentation und Zeitraffer-Technologie.
+                <h2>Unsicher, welche Kamera und welches Intervall Ihr Projekt braucht?</h2>
+                <p>
+                    Rufen Sie kurz an — wir sagen Ihnen in 10 Minuten, was für Ihre Baustelle sinnvoll ist und was es kostet.
                 </p>
-                <a href="/#contact" class="btn" data-i18n="ratgeber_cta_btn">Beratung anfragen</a>
+                <a href="tel:+491781345105" class="btn" style="padding: 1rem 2rem; font-size: 1.125rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    0178 134 5105 — jetzt anrufen
+                </a>
+                <p style="margin-top: 1.25rem; margin-bottom: 0;">
+                    Oder schreiben Sie uns per <a href="https://wa.me/491781345105" style="color: var(--primary); font-weight: 500;">WhatsApp</a>
+                </p>
             </div>
         </div>
     </main>
@@ -632,6 +1135,24 @@
             </p>
         </div>
     </footer>
+
+    <!-- Sticky Mobile Call CTA -->
+    <div id="mobileCallBar" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: var(--primary); padding: 0.75rem 1rem; box-shadow: 0 -2px 10px rgba(0,0,0,0.3);">
+        <a href="tel:+491781345105" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: #000; text-decoration: none; font-weight: 600; font-size: 1.1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Jetzt anrufen — 0178 134 5105
+        </a>
+    </div>
+    <style>
+        @media (max-width: 768px) {
+            #mobileCallBar { display: block !important; }
+            main { padding-bottom: 60px; }
+            footer { padding-bottom: 60px; }
+        }
+    </style>
+
     <!-- Translations -->
     <script src="/translations.js" defer></script>
     <script>

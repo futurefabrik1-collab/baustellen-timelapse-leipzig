@@ -50,12 +50,13 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "LocalBusiness",
+      "@id": "https://baustellen-timelapse-leipzig.de/#business",
       "name": "Baustellen-Timelapse Leipzig",
       "legalName": "Burnett & Manhardt GbR",
       "url": "https://baustellen-timelapse-leipzig.de",
-      "logo": "https://baustellen-timelapse-leipzig.de/hero-construction.jpg",
-      "description": "Professionelle Baustellenkameras und Zeitraffer-Filmproduktion für Leipzig und Umgebung",
+      "image": "https://baustellen-timelapse-leipzig.de/hero-construction.jpg",
+      "description": "Professionelle Baustellenkameras und Zeitraffer-Filmproduktion für Leipzig und Umgebung. 4K-Qualität, DSGVO-konform, Cloud-Zugang.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Klingenstraße 22",
@@ -64,19 +65,27 @@
         "postalCode": "04229",
         "addressCountry": "DE"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "telephone": "+4917634584847",
-        "email": "contact@futurefabrik.com",
-        "availableLanguage": ["de", "en"]
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "51.3396955",
+        "longitude": "12.3730747"
+      },
+      "telephone": "+491781345105",
+      "email": "info@baustellen-timelapse-leipzig.de",
+      "priceRange": "ab 250 € pro Monat",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
       },
       "areaServed": [
         {"@type": "City", "name": "Leipzig"},
         {"@type": "City", "name": "Halle (Saale)"},
         {"@type": "City", "name": "Chemnitz"},
         {"@type": "City", "name": "Jena"},
-        {"@type": "City", "name": "Erfurt"}
+        {"@type": "City", "name": "Erfurt"},
+        {"@type": "AdministrativeArea", "name": "Sachsen"}
       ]
     }
     </script>
@@ -89,11 +98,7 @@
       "serviceType": "Baustellendokumentation und Zeitraffer-Filmproduktion",
       "name": "Baustellen-Timelapse Leipzig",
       "description": "Professionelle Baustellenkameras, Zeitraffer-Filmproduktion und digitale Baudokumentation mit 4K-Qualität",
-      "provider": {
-        "@type": "Organization",
-        "name": "Baustellen-Timelapse Leipzig",
-        "legalName": "Burnett & Manhardt GbR"
-      },
+      "provider": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
       "areaServed": {
         "@type": "City",
         "name": "Leipzig"
@@ -139,80 +144,7 @@
       "name": "Baustellen-Timelapse Leipzig",
       "url": "https://baustellen-timelapse-leipzig.de",
       "description": "Professionelle Baustellendokumentation und Zeitraffer-Filmproduktion",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Burnett & Manhardt GbR"
-      }
-    }
-    </script>
-    
-    <!-- Structured Data - LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Baustellen-Timelapse Leipzig",
-      "image": "https://baustellen-timelapse-leipzig.de/hero-construction.jpg",
-      "description": "Professionelle Baustellenkameras und Zeitraffer-Filmproduktion für Leipzig und Umgebung. 4K-Qualität, DSGVO-konform, 24/7 Cloud-Zugang.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Klingenstraße 22",
-        "addressLocality": "Leipzig",
-        "addressRegion": "Sachsen",
-        "postalCode": "04229",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "51.3396955",
-        "longitude": "12.3730747"
-      },
-      "url": "https://baustellen-timelapse-leipzig.de",
-      "telephone": "+4917634584847",
-      "email": "contact@futurefabrik.com",
-      "priceRange": "$$",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "areaServed": [
-        {"@type": "City", "name": "Leipzig"},
-        {"@type": "City", "name": "Halle (Saale)"},
-        {"@type": "City", "name": "Chemnitz"},
-        {"@type": "City", "name": "Jena"},
-        {"@type": "City", "name": "Erfurt"},
-        {"@type": "AdministrativeArea", "name": "Sachsen"}
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Baustellendokumentation Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Baustellenkamera Installation",
-              "description": "4K Baustellenkameras mit 24/7 Cloud-Zugang"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Zeitraffer-Filmproduktion",
-              "description": "Professionelle Timelapse-Videos"
-            }
-          }
-        ]
-      }
+      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"}
     }
     </script>
     
@@ -246,10 +178,16 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Wie schnell ist eine Installation möglich?","acceptedAnswer":{"@type":"Answer","text":"In der Regel innerhalb weniger Werktage nach Abstimmung von Standort, Stromversorgung und Blickwinkel."}},
-        {"@type":"Question","name":"Bekomme ich Live-Zugriff auf die Baustelle?","acceptedAnswer":{"@type":"Answer","text":"Ja, Sie erhalten einen geschützten Cloud-Zugang mit 24/7 Zugriff auf aktuelle Aufnahmen und Zeitrafferstände."}},
-        {"@type":"Question","name":"Ist die Lösung DSGVO-konform?","acceptedAnswer":{"@type":"Answer","text":"Ja, wir planen Kameraausrichtung und Datenhandling so, dass Datenschutzanforderungen im Baustellenkontext eingehalten werden."}},
-        {"@type":"Question","name":"Kann ich eine Baustellenkamera mieten statt kaufen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Für viele Projekte ist Miete wirtschaftlicher. Details finden Sie auf unserer Seite Miete & Preise."}}
+        {"@type":"Question","name":"Wie schnell ist eine Installation möglich?","acceptedAnswer":{"@type":"Answer","text":"In der Regel innerhalb weniger Werktage nach Abstimmung von Standort, Stromversorgung und Blickwinkel. Bei dringendem Bedarf sind auch kurzfristige Einsätze möglich."}},
+        {"@type":"Question","name":"Was kostet eine Baustellenkamera?","acceptedAnswer":{"@type":"Answer","text":"Unsere Pakete starten ab 250 €/Monat. Der finale Preis richtet sich nach Laufzeit, Update-Frequenz und Montageaufwand. Rufen Sie uns an für ein individuelles Angebot — wir beraten Sie persönlich."}},
+        {"@type":"Question","name":"Bekomme ich Live-Zugriff auf die Baustelle?","acceptedAnswer":{"@type":"Answer","text":"Sie erhalten projektbezogene Updates in der vereinbarten Frequenz — monatlich, zweiwöchentlich oder wöchentlich. Die Bilder stehen Ihnen über einen sicheren Cloud-Zugang jederzeit zur Verfügung."}},
+        {"@type":"Question","name":"Ist die Lösung DSGVO-konform?","acceptedAnswer":{"@type":"Answer","text":"Ja. Wir planen Kameraausrichtung und Datenhandling so, dass Datenschutzanforderungen im Baustellenkontext eingehalten werden. Personenbezogene Bereiche werden bei der Aufnahme berücksichtigt."}},
+        {"@type":"Question","name":"Brauche ich einen Stromanschluss vor Ort?","acceptedAnswer":{"@type":"Answer","text":"In der Regel ja — ein 230V-Anschluss in Kameranähe ist ideal. Für Standorte ohne Strom bieten wir Lösungen mit Solarmodulen und Akku-Puffern an."}},
+        {"@type":"Question","name":"Welche Kameras werden eingesetzt?","acceptedAnswer":{"@type":"Answer","text":"Wir setzen professionelle 4K-Kameras mit wetterfesten Gehäusen (IP66) ein. Die Kameras verfügen über LTE-Anbindung und arbeiten zuverlässig bei Temperaturen von -20 °C bis +50 °C."}},
+        {"@type":"Question","name":"Gibt es eine Mindestlaufzeit?","acceptedAnswer":{"@type":"Answer","text":"Wir sind flexibel — ob wenige Wochen für eine Bauphase oder mehrere Jahre für ein Großprojekt. Die Laufzeit richtet sich nach Ihrem Projektplan."}},
+        {"@type":"Question","name":"Was passiert bei schlechtem Wetter?","acceptedAnswer":{"@type":"Answer","text":"Unsere Kameras sind wetterfest und arbeiten bei Regen, Schnee und starkem Wind zuverlässig weiter. In der Postproduktion gleichen wir wetterbedingte Helligkeitsschwankungen für ein sauberes Zeitrafferergebnis aus."}},
+        {"@type":"Question","name":"Kann ich eine Baustellenkamera mieten statt kaufen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Für die meisten Projekte ist Miete wirtschaftlicher — Sie zahlen nur für die tatsächliche Projektdauer und wir kümmern uns um Wartung und Support."}},
+        {"@type":"Question","name":"Wie wird der Zeitrafferfilm produziert?","acceptedAnswer":{"@type":"Answer","text":"Aus den gesammelten Aufnahmen erstellen wir einen professionellen Zeitrafferfilm mit Farbkorrektur, Stabilisierung und Wetterausgleich. Das Ergebnis eignet sich für Präsentationen, Social Media und Investor-Updates."}}
       ]
     }
     </script>
@@ -1356,9 +1294,9 @@
                     </svg>
                     <span data-i18n="hero_badge">Leipzig & 120 km Umgebung</span>
                 </div>
-                <h1 class="animate-fade-in" style="animation-delay: 0.1s;" data-i18n="home_hero_title">BAUSTELLEN-ZEITRAFFER <span style="color: var(--primary);">für LEIPZIG</span></h1>
+                <h1 class="animate-fade-in" style="animation-delay: 0.1s;" data-i18n="home_hero_title">BAUSTELLENKAMERA MIETEN <span style="color: var(--primary);">in LEIPZIG</span></h1>
                 <p class="animate-fade-in" style="animation-delay: 0.2s;" data-i18n="home_hero_subtitle">
-                    Für Bauunternehmen, Architekturbüros und Projektentwickler: Hochauflösende Baudokumentation mit 4K-Kameras, LTE-Anbindung und professioneller Aufbereitung aus einer Hand.
+                    Wir montieren die 4K-Kamera in wenigen Tagen, Sie sehen Ihre Baustelle jederzeit in der Cloud — und am Ende erhalten Sie den fertigen Zeitrafferfilm für Marketing und Bauherren-Kommunikation. Lokales Team, ein Ansprechpartner, DSGVO-konform.
                 </p>
                 <div class="animate-fade-in" style="animation-delay: 0.3s; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: center;">
                     <a href="tel:+491781345105" class="btn" style="padding: 1rem 2rem; font-size: 1.125rem; background: var(--primary); color: #000;">
@@ -1402,16 +1340,16 @@
                         <div class="stat-label" data-i18n="stat1_label">Datenschutz-orientiert</div>
                     </div>
                     <div class="stat-item animate-fade-in" style="animation-delay: 0.1s;">
-                        <div class="stat-value">4K+</div>
+                        <div class="stat-value">4K</div>
                         <div class="stat-label" data-i18n="stat2_label">Ultra HD Qualität</div>
                     </div>
                     <div class="stat-item animate-fade-in" style="animation-delay: 0.2s;">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label" data-i18n="stat3_label">Projekte realisiert</div>
+                        <div class="stat-value">Leipzig</div>
+                        <div class="stat-label" data-i18n="stat3_label">Lokales Team vor Ort</div>
                     </div>
                     <div class="stat-item animate-fade-in" style="animation-delay: 0.3s;">
                         <div class="stat-value">24h</div>
-                        <div class="stat-label" data-i18n="stat4_label">Support</div>
+                        <div class="stat-label" data-i18n="stat4_label">Antwort auf Anfragen</div>
                     </div>
                 </div>
             </div>
@@ -1534,29 +1472,18 @@
                 </div>
 
                 <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 0.75rem; padding: 2rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
-                    <h2 style="text-align: center; margin-bottom: 1.25rem;">🔬 <span data-i18n="tech_title">Unsere Technologie</span></h2>
-                    <p style="text-align: center; max-width: 800px; margin: 0 auto 1.5rem; color: var(--muted);" data-i18n="tech_subtitle">Wir setzen auf modernste Hardware und Software, um Ihnen die bestmögliche Qualität zu liefern:</p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
-                        <div>
-                            <h3 style="margin-bottom: 0.75rem;" data-i18n="tech_hw_title">Hardware</h3>
-                            <ul style="color: var(--muted); padding-left: 1.2rem; line-height: 1.8;">
-                                <li>4K & 6K Kameras</li>
-                                <li>DJI Enterprise Drohnen</li>
-                                <li>Wetterfeste Gehäuse (IP66)</li>
-                                <li>Solar & LTE-Module</li>
-                                <li>Stabilisierungs-Systeme</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 style="margin-bottom: 0.75rem;" data-i18n="tech_sw_title">Software</h3>
-                            <ul style="color: var(--muted); padding-left: 1.2rem; line-height: 1.8;">
-                                <li>Reality Capture (3D-Rekonstruktion)</li>
-                                <li>DaVinci Resolve (Color Grading)</li>
-                                <li>Adobe Creative Suite</li>
-                                <li>Photogrammetrie-Software</li>
-                                <li>Cloud-Management-Plattform</li>
-                            </ul>
-                        </div>
+                    <h2 style="text-align: center; margin-bottom: 1.25rem;"><span data-i18n="tech_title">Unsere Technik im Überblick</span></h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto; color: var(--muted); line-height: 1.8;">
+                        <ul style="padding-left: 1.2rem; margin: 0;">
+                            <li>4K-Kameras, wetterfest (IP66)</li>
+                            <li>Betrieb von -20 °C bis +50 °C</li>
+                            <li>LTE-Datenübertragung</li>
+                        </ul>
+                        <ul style="padding-left: 1.2rem; margin: 0;">
+                            <li>Solar-Option für Standorte ohne Strom</li>
+                            <li>Sicherer Cloud-Zugang</li>
+                            <li>Drohnenaufnahmen auf Anfrage</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -1613,14 +1540,12 @@
                         <video
                             src="https://pub-b64f0b14938f4f54a6acb4b84f9549ff.r2.dev/neue_welle_jan26.mp4"
                             aria-label="Baustellen-Zeitraffer Leipzig – Neue Welle Projektüberblick"
-                            autoplay
                             muted
-                            loop
                             controls
                             playsinline
                             webkit-playsinline
                             preload="metadata"
-                            poster="/neue_welle_thumb.png"
+                            poster="/neue_welle_thumb.jpg"
                             style="background:#000;">
                             Ihr Browser unterstützt das Video-Tag nicht.
                         </video>
@@ -1691,16 +1616,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" style="padding: 1.5rem;">
-                        <div style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.75rem;">&ldquo;</div>
-                        <p style="color: var(--fg); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Besonders überzeugt hat uns die Qualität der Zeitrafferfilme. Wir nutzen das Material für Social Media und Kundenpräsentationen — die Reaktionen sind durchweg positiv.</p>
-                        <div style="display: flex; align-items: center; gap: 0.75rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; font-weight: 600; color: #000; font-size: 0.85rem;">WB</div>
-                            <div>
-                                <div style="font-weight: 500; font-size: 0.9rem;">Wohnungsbau Leipzig</div>
-                                <div style="color: var(--muted); font-size: 0.8rem;">Bauunternehmen</div>
-                            </div>
-                        </div>
+                    <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.05rem;">Referenzprojekte mit BEKA Immobilien</h3>
+                        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Zwei dokumentierte Bauvorhaben in Leipzig — die "Neue Welle" und das Wohnhaus Delitzscher Straße (12 Monate Laufzeit). Beide Filme finden Sie in unseren <a href="#portfolio" style="color: var(--primary);">Referenzen</a>.</p>
+                        <a href="tel:+491781345105" style="color: var(--primary); font-weight: 500; font-size: 0.95rem;">Referenzen persönlich besprechen → 0178 134 5105</a>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 1.5rem;">
@@ -1716,17 +1635,17 @@
                     <div class="section-badge" data-i18n="faq_badge">FAQ</div>
                     <h2 class="section-title" data-i18n="faq_title">Häufige Fragen zur Baustellenkamera in Leipzig</h2>
                 </div>
-                <div style=”display: grid; gap: 0.9rem; max-width: 980px; margin: 0 auto;”>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Wie schnell ist eine Installation möglich?</h3><p style=”color: var(--muted);”>In der Regel innerhalb weniger Werktage nach Abstimmung von Standort, Stromversorgung und Blickwinkel. Bei dringendem Bedarf sind auch kurzfristige Einsätze möglich.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Was kostet eine Baustellenkamera?</h3><p style=”color: var(--muted);”>Unsere Pakete starten ab 250 €/Monat. Der finale Preis richtet sich nach Laufzeit, Update-Frequenz und Montageaufwand. Rufen Sie uns an für ein individuelles Angebot — wir beraten Sie persönlich.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Bekomme ich Live-Zugriff auf die Baustelle?</h3><p style=”color: var(--muted);”>Sie erhalten projektbezogene Updates in der vereinbarten Frequenz — monatlich, zweiwöchentlich oder wöchentlich. Die Bilder stehen Ihnen über einen sicheren Cloud-Zugang jederzeit zur Verfügung.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Ist die Lösung DSGVO-konform?</h3><p style=”color: var(--muted);”>Ja. Wir planen Kameraausrichtung und Datenhandling so, dass Datenschutzanforderungen im Baustellenkontext eingehalten werden. Personenbezogene Bereiche werden bei der Aufnahme berücksichtigt.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Brauche ich einen Stromanschluss vor Ort?</h3><p style=”color: var(--muted);”>In der Regel ja — ein 230V-Anschluss in Kameranähe ist ideal. Für Standorte ohne Strom bieten wir Lösungen mit Solarmodulen und Akku-Puffern an.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Welche Kameras werden eingesetzt?</h3><p style=”color: var(--muted);”>Wir setzen professionelle 4K-Kameras mit wetterfesten Gehäusen (IP66) ein. Die Kameras verfügen über LTE-Anbindung und arbeiten zuverlässig bei Temperaturen von -20 °C bis +50 °C.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Gibt es eine Mindestlaufzeit?</h3><p style=”color: var(--muted);”>Wir sind flexibel — ob wenige Wochen für eine Bauphase oder mehrere Jahre für ein Großprojekt. Die Laufzeit richtet sich nach Ihrem Projektplan.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Was passiert bei schlechtem Wetter?</h3><p style=”color: var(--muted);”>Unsere Kameras sind wetterfest und arbeiten bei Regen, Schnee und starkem Wind zuverlässig weiter. In der Postproduktion gleichen wir wetterbedingte Helligkeitsschwankungen für ein sauberes Zeitrafferergebnis aus.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Kann ich eine Baustellenkamera mieten statt kaufen?</h3><p style=”color: var(--muted);”>Ja. Für die meisten Projekte ist Miete wirtschaftlicher — Sie zahlen nur für die tatsächliche Projektdauer und wir kümmern uns um Wartung und Support.</p></div>
-                    <div class=”card” style=”padding: 1rem 1.2rem;”><h3 style=”margin-bottom: 0.35rem;”>Wie wird der Zeitrafferfilm produziert?</h3><p style=”color: var(--muted);”>Aus den gesammelten Aufnahmen erstellen wir einen professionellen Zeitrafferfilm mit Farbkorrektur, Stabilisierung und Wetterausgleich. Das Ergebnis eignet sich für Präsentationen, Social Media und Investor-Updates.</p></div>
+                <div style="display: grid; gap: 0.9rem; max-width: 980px; margin: 0 auto;">
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Wie schnell ist eine Installation möglich?</h3><p style="color: var(--muted);">In der Regel innerhalb weniger Werktage nach Abstimmung von Standort, Stromversorgung und Blickwinkel. Bei dringendem Bedarf sind auch kurzfristige Einsätze möglich.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Was kostet eine Baustellenkamera?</h3><p style="color: var(--muted);">Unsere Pakete starten ab 250 €/Monat. Der finale Preis richtet sich nach Laufzeit, Update-Frequenz und Montageaufwand. Rufen Sie uns an für ein individuelles Angebot — wir beraten Sie persönlich.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Bekomme ich Live-Zugriff auf die Baustelle?</h3><p style="color: var(--muted);">Sie erhalten projektbezogene Updates in der vereinbarten Frequenz — monatlich, zweiwöchentlich oder wöchentlich. Die Bilder stehen Ihnen über einen sicheren Cloud-Zugang jederzeit zur Verfügung.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Ist die Lösung DSGVO-konform?</h3><p style="color: var(--muted);">Ja. Wir planen Kameraausrichtung und Datenhandling so, dass Datenschutzanforderungen im Baustellenkontext eingehalten werden. Personenbezogene Bereiche werden bei der Aufnahme berücksichtigt.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Brauche ich einen Stromanschluss vor Ort?</h3><p style="color: var(--muted);">In der Regel ja — ein 230V-Anschluss in Kameranähe ist ideal. Für Standorte ohne Strom bieten wir Lösungen mit Solarmodulen und Akku-Puffern an.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Welche Kameras werden eingesetzt?</h3><p style="color: var(--muted);">Wir setzen professionelle 4K-Kameras mit wetterfesten Gehäusen (IP66) ein. Die Kameras verfügen über LTE-Anbindung und arbeiten zuverlässig bei Temperaturen von -20 °C bis +50 °C.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Gibt es eine Mindestlaufzeit?</h3><p style="color: var(--muted);">Wir sind flexibel — ob wenige Wochen für eine Bauphase oder mehrere Jahre für ein Großprojekt. Die Laufzeit richtet sich nach Ihrem Projektplan.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Was passiert bei schlechtem Wetter?</h3><p style="color: var(--muted);">Unsere Kameras sind wetterfest und arbeiten bei Regen, Schnee und starkem Wind zuverlässig weiter. In der Postproduktion gleichen wir wetterbedingte Helligkeitsschwankungen für ein sauberes Zeitrafferergebnis aus.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Kann ich eine Baustellenkamera mieten statt kaufen?</h3><p style="color: var(--muted);">Ja. Für die meisten Projekte ist Miete wirtschaftlicher — Sie zahlen nur für die tatsächliche Projektdauer und wir kümmern uns um Wartung und Support.</p></div>
+                    <div class="card" style="padding: 1rem 1.2rem;"><h3 style="margin-bottom: 0.35rem;">Wie wird der Zeitrafferfilm produziert?</h3><p style="color: var(--muted);">Aus den gesammelten Aufnahmen erstellen wir einen professionellen Zeitrafferfilm mit Farbkorrektur, Stabilisierung und Wetterausgleich. Das Ergebnis eignet sich für Präsentationen, Social Media und Investor-Updates.</p></div>
                 </div>
             </div>
         </section>
@@ -2103,9 +2022,9 @@
 
                 // Add markers for nearby cities
                 const cities = [
-                    { name: 'Dresden', lat: 51.0504, lng: 13.7373 },
                     { name: 'Halle', lat: 51.4825, lng: 11.9702 },
                     { name: 'Chemnitz', lat: 50.8278, lng: 12.9214 },
+                    { name: 'Jena', lat: 50.9271, lng: 11.5892 },
                     { name: 'Erfurt', lat: 50.9848, lng: 11.0299 }
                 ];
 
