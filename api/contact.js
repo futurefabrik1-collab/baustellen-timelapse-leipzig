@@ -49,12 +49,10 @@ module.exports = async (req, res) => {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.sendgrid.net',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false,
+      service: 'gmail',
       auth: {
-        user: process.env.SMTP_USER || 'apikey',
-        pass: process.env.SMTP_PASS,
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
 
@@ -63,7 +61,7 @@ module.exports = async (req, res) => {
     const safePhone = phone ? escapeHtml(phone) : '';
     const safeMessage = escapeHtml(message);
 
-    const senderEmail = process.env.SMTP_USER_EMAIL || 'baustellen-timelapse-leipzig@futurefabrik.com';
+    const senderEmail = process.env.GMAIL_USER || 'futurefabrik1@gmail.com';
     const recipientEmail = process.env.RECIPIENT_EMAIL || 'markadamburnett@gmail.com';
 
     // Email to business owner
@@ -152,16 +150,6 @@ module.exports = async (req, res) => {
     console.error('Email error:', error);
     return res.status(500).json({
       error: 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.',
-      debug: {
-        message: error.message,
-        code: error.code,
-        command: error.command,
-        hasSmtpHost: !!process.env.SMTP_HOST,
-        hasSmtpPass: !!process.env.SMTP_PASS,
-        hasSmtpUser: !!process.env.SMTP_USER,
-        hasSenderEmail: !!process.env.SMTP_USER_EMAIL,
-        smtpHost: process.env.SMTP_HOST,
-      },
     });
   }
 };
