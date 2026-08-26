@@ -19,8 +19,8 @@
     <meta property="og:title" content="Baustellenkamera mieten in Leipzig | Miete & Preise">
     <meta property="og:description" content="Baustellenkamera mieten in Leipzig: 4K-Kamera, Cloud-Zugang, Zeitraffer-Export und DSGVO-konforme Umsetzung.">
     <meta property="og:image" content="https://baustellen-timelapse-leipzig.de/hero-construction.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
     <meta property="og:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 4K-Zeitraffer-Dokumentation">
     <meta property="og:locale" content="de_DE">
 
@@ -55,15 +55,15 @@
     "@context":"https://schema.org",
     "@type":"Service",
     "name":"Baustellenkamera mieten in Leipzig",
-    "provider":{"@type":"Organization","name":"Baustellen-Timelapse Leipzig","url":"https://baustellen-timelapse-leipzig.de"},
-    "areaServed":{"@type":"City","name":"Leipzig"},
+    "provider":{"@type":"Organization","@id":"https://baustellen-timelapse-leipzig.de/#business","name":"Baustellen-Timelapse Leipzig","url":"https://baustellen-timelapse-leipzig.de"},
+    "areaServed":[{"@type":"City","name":"Leipzig"},{"@type":"City","name":"Halle (Saale)"},{"@type":"City","name":"Chemnitz"},{"@type":"City","name":"Jena"},{"@type":"City","name":"Erfurt"}],
     "serviceType":"Baustellenkamera-Miete und Zeitraffer-Dokumentation",
     "url":"https://baustellen-timelapse-leipzig.de/baustellenkamera-mieten-leipzig",
     "hasOfferCatalog":{
       "@type":"OfferCatalog",
       "name":"Mietpakete Baustellenkamera Leipzig",
       "itemListElement":[
-        {"@type":"Offer","name":"Baustellenkamera mieten","description":"4K-Kamera, Installation, Cloud-Zugang, DSGVO-konforme Umsetzung. Individuelles Angebot nach Projektumfang.","priceSpecification":{"@type":"UnitPriceSpecification","price":"250","priceCurrency":"EUR","unitText":"MONTH","minPrice":"250"}}
+        {"@type":"Offer","name":"Baustellenkamera mieten","description":"4K-Kamera, Installation, Cloud-Zugang, DSGVO-konforme Umsetzung. Individuelles Angebot nach Projektumfang.","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"EUR","unitCode":"MON","unitText":"Monat","minPrice":"250"}}
       ]
     }
   }
@@ -74,7 +74,7 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"Gibt es eine Mindestlaufzeit?","acceptedAnswer":{"@type":"Answer","text":"Nein, wir arbeiten ohne lange Mindestlaufzeiten. Sie mieten die Kamera so lange, wie auf Ihrer Baustelle tatsächlich gebaut wird — ob drei Monate oder drei Jahre. Verlängerungen sind jederzeit unkompliziert möglich."}},
+      {"@type":"Question","name":"Gibt es eine Mindestlaufzeit?","acceptedAnswer":{"@type":"Answer","text":"Wir sind flexibel — ob wenige Wochen für eine Bauphase oder mehrere Jahre für ein Großprojekt. Die Laufzeit richtet sich nach Ihrem Projektplan."}},
       {"@type":"Question","name":"Was passiert bei Störungen?","acceptedAnswer":{"@type":"Answer","text":"Wir überwachen alle Kameras aus der Ferne und erkennen Ausfälle meist, bevor Sie sie bemerken. Als lokales Team in Leipzig sind wir bei Bedarf kurzfristig vor Ort. Für die Dauer einer Störung entstehen Ihnen keine Nachteile."}},
       {"@type":"Question","name":"Kann die Kamera während des Projekts umziehen?","acceptedAnswer":{"@type":"Answer","text":"Ja, ein Standortwechsel ist jederzeit möglich — etwa wenn der Kran versetzt wird oder ein neuer Bauabschnitt beginnt. Wir übernehmen den Umbau und richten die Kamera neu aus. Der Aufwand wird transparent nach Montageeinsatz berechnet."}},
       {"@type":"Question","name":"Wem gehören die Aufnahmen?","acceptedAnswer":{"@type":"Answer","text":"Alle Bilder und der fertige Zeitrafferfilm gehören Ihnen. Sie erhalten die vollen Nutzungsrechte für Marketing, Dokumentation und interne Zwecke. Die Umsetzung erfolgt DSGVO-konform, inklusive automatischer Verpixelung von Personen auf Wunsch."}},
@@ -85,7 +85,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     :root{--bg:#0a0a0a;--fg:#f7f7f7;--muted:#a3a3a3;--card:#171717;--border:#262626;--primary:#f59e0b;--primary-dark:#d97706}
@@ -101,16 +101,10 @@
     nav a:hover{color:var(--fg)}
     nav a.active{color:var(--primary);font-weight:400}
     .mobile-menu-btn{display:none;background:none;border:none;color:var(--fg);cursor:pointer;padding:.5rem;z-index:1001}
-    .language-switcher{display:inline-flex;align-items:center;margin-left:1.5rem;gap:.5rem}
-    .lang-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.875rem;font-weight:600;padding:.25rem .5rem;transition:color .3s;font-family:inherit}
-    .lang-btn:hover{color:var(--fg)}
-    .lang-btn.active{color:var(--primary)}
-    .lang-separator{color:var(--muted);font-size:.875rem}
     @media (max-width: 767px){
       .mobile-menu-btn{display:block}
       nav{position:fixed;top:80px;left:0;right:0;background:rgba(10,10,10,.98);backdrop-filter:blur(10px);padding:2rem;flex-direction:column;align-items:flex-start;gap:1.5rem;display:none;border-top:1px solid var(--border);z-index:999}
       nav.mobile-open{display:flex}
-      .language-switcher{margin-left:0 !important}
     }
     .btn{display:inline-block;background:var(--primary);color:#000;padding:.5rem 1.5rem;border-radius:.375rem;text-decoration:none;font-weight:500;transition:background .3s}
     .btn:hover{background:var(--primary-dark)}
@@ -124,6 +118,11 @@
     h1,h2,h3{line-height:1.2}
     .muted{color:var(--muted)}
     footer{padding:2rem 0;border-top:1px solid var(--border);margin-top:4rem;text-align:center;color:var(--muted)}
+    @media (max-width: 768px) {
+      #mobileCallBar { display: block !important; }
+      main { padding-bottom: 60px; }
+      footer { padding-bottom: 60px; }
+    }
   </style>
 </head>
 <body>
@@ -156,11 +155,6 @@
           </svg>
           0178 134 5105
         </a>
-        <div class="language-switcher">
-          <button class="lang-btn active" data-lang="de" aria-label="Deutsch">DE</button>
-          <span class="lang-separator">/</span>
-          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-        </div>
         <a class="btn" href="/#contact" data-i18n="nav_cta">Projekt besprechen</a>
       </nav>
       </div>
@@ -311,7 +305,7 @@
         <div class="grid" style="margin-top:1rem;grid-template-columns:1fr;">
           <article class="card">
             <h3>Gibt es eine Mindestlaufzeit?</h3>
-            <p class="muted">Nein, wir arbeiten ohne lange Mindestlaufzeiten. Sie mieten die Kamera so lange, wie auf Ihrer Baustelle tatsächlich gebaut wird — ob drei Monate oder drei Jahre. Verlängerungen sind jederzeit unkompliziert möglich.</p>
+            <p class="muted">Wir sind flexibel — ob wenige Wochen für eine Bauphase oder mehrere Jahre für ein Großprojekt. Die Laufzeit richtet sich nach Ihrem Projektplan.</p>
           </article>
           <article class="card">
             <h3>Was passiert bei Störungen?</h3>
@@ -364,15 +358,7 @@
       Jetzt anrufen — 0178 134 5105
     </a>
   </div>
-  <style>
-    @media (max-width: 768px) {
-      #mobileCallBar { display: block !important; }
-      main { padding-bottom: 60px; }
-      footer { padding-bottom: 60px; }
-    }
-  </style>
 
-  <script src="/translations.js" defer></script>
   <script>
     function toggleMobileMenu() {
       const nav = document.getElementById('mainNav');
@@ -404,6 +390,22 @@
 
         L.circleMarker([51.3397, 12.3731], { radius:10, fillColor:'#f59e0b', color:'#fff', weight:2, opacity:1, fillOpacity:0.85 }).addTo(map).bindPopup('<b>Leipzig</b><br>Unser Hauptstandort');
         L.circle([51.3397, 12.3731], { color:'#f59e0b', fillColor:'#f59e0b', fillOpacity:0.12, radius:120000 }).addTo(map);
+
+        const cities = [
+          { name: 'Halle', lat: 51.4825, lng: 11.9702 },
+          { name: 'Chemnitz', lat: 50.8278, lng: 12.9214 },
+          { name: 'Jena', lat: 50.9271, lng: 11.5892 },
+          { name: 'Erfurt', lat: 50.9848, lng: 11.0299 }
+        ];
+
+        cities.forEach(city => {
+          L.circleMarker([city.lat, city.lng], {
+            radius: 5,
+            fillColor: '#f59e0b',
+            color: 'transparent',
+            fillOpacity: 0.7
+          }).addTo(map).bindPopup(city.name);
+        });
       } catch(e) { console.error('Rental map failed', e); }
     }
 

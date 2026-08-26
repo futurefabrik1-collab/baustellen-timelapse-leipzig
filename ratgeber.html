@@ -196,16 +196,8 @@
             nav.mobile-open {
                 display: flex;
             }
-            
-            .language-switcher {
-                margin-left: 0 !important;
-            }
         }
         
-        nav.old-style {
-            display: none;
-        }
-
         @media (min-width: 768px) {
             nav {
                 display: flex;
@@ -224,59 +216,6 @@
         
         nav a:hover {
             color: var(--foreground);
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            color: var(--foreground);
-        }
-        
-        .logo-icon {
-            background: var(--primary);
-            color: #000;
-            width: 40px;
-            height: 40px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-        
-        .language-switcher {
-            display: inline-flex;
-            align-items: center;
-            margin-left: 1.5rem;
-            gap: 0.5rem;
-        }
-        
-        .lang-btn {
-            background: none;
-            border: none;
-            color: var(--muted);
-            cursor: pointer;
-            font-size: 0.875rem;
-            font-weight: 600;
-            padding: 0.25rem 0.5rem;
-            transition: color 0.3s;
-            font-family: inherit;
-        }
-        
-        .lang-btn:hover {
-            color: var(--foreground);
-        }
-        
-        .lang-btn.active {
-            color: var(--primary);
-        }
-        
-        .lang-separator {
-            color: var(--muted);
-            font-size: 0.875rem;
         }
         
         .container {
@@ -341,7 +280,7 @@
             margin: 0 auto;
         }
         
-                .articles-grid {
+        .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 1.25rem;
@@ -581,6 +520,18 @@
             .articles-grid {
                 grid-template-columns: 1fr;
             }
+
+            #mobileCallBar {
+                display: block !important;
+            }
+
+            main {
+                padding-bottom: 60px;
+            }
+
+            footer {
+                padding-bottom: 60px;
+            }
         }
     </style>
 </head>
@@ -609,11 +560,6 @@
                     <a href="/ratgeber" data-i18n="nav_guide">Ratgeber</a>
                     <a href="/baustellenkamera-mieten-leipzig">Miete & Preise</a>
                     <a href="/#contact" data-i18n="nav_contact">Kontakt</a>
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="de" aria-label="Deutsch">DE</button>
-                        <span class="lang-separator">/</span>
-                        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-                    </div>
                     <a href="tel:+491781345105" style="color: var(--primary); font-weight: 500; white-space: nowrap;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 0.25rem;">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -769,7 +715,7 @@
                     <h2>Solar &amp; LTE: Autarke Stromversorgung auf der Baustelle</h2>
                     <p>
                         Die häufigste Frage vor der Kamerainstallation lautet: „Wo bekommen wir Strom und
-                        Internet her?" Die gute Nachricht: Moderne Baustellenkameras brauchen oft weder das eine
+                        Internet her?“ Die gute Nachricht: Moderne Baustellenkameras brauchen oft weder das eine
                         noch das andere von der Baustelle. Solarpanel und LTE-Modem machen die Kamera komplett
                         autark.
                     </p>
@@ -895,7 +841,7 @@
                     <h3>Drei Praxis-Tipps</h3>
                     <ul>
                         <li>Klären Sie die Nutzungsrechte am Material vertraglich, bevor die Kamera montiert wird – inklusive Social-Media-Nutzung durch Subunternehmer und Bauherr.</li>
-                        <li>Posten Sie während der Bauzeit, nicht erst danach. Ein laufendes Projekt erzeugt Wiedererkennung („das Gebäude an der B2 – das baut ihr?").</li>
+                        <li>Posten Sie während der Bauzeit, nicht erst danach. Ein laufendes Projekt erzeugt Wiedererkennung („das Gebäude an der B2 – das baut ihr?“).</li>
                         <li>Versehen Sie jeden Clip mit Projektname und Standort – lokale Sichtbarkeit ist für Bauunternehmen wertvoller als virale Reichweite.</li>
                     </ul>
                     <p>
@@ -927,7 +873,7 @@
                     <p>
                         Die bewährte Position liegt diagonal zur Baustelle, mit Blick auf die spätere
                         Hauptansicht des Gebäudes, aus 8–25 Metern Höhe. Von schräg oben bleibt die Baugrube
-                        ebenso sichtbar wie später die Fassade – eine ebenerdige Kamera „ertrinkt" dagegen ab dem
+                        ebenso sichtbar wie später die Fassade – eine ebenerdige Kamera „ertrinkt“ dagegen ab dem
                         zweiten Geschoss im Bauzaun. Geeignete Montagepunkte: Nachbargebäude (Dach oder Fassade,
                         mit schriftlicher Gestattung des Eigentümers), eigener Mast am Baufeldrand, Kranturm oder
                         ein hoher Container-Stapel.
@@ -983,11 +929,11 @@
                     <h3>Was die beiden Ziffern bedeuten</h3>
                     <p>
                         Die erste Ziffer beschreibt den Schutz gegen Fremdkörper und Staub (0–6), die zweite den
-                        Schutz gegen Wasser (0–9). Ein Beispiel: IP66 heißt „staubdicht" (6) und „geschützt gegen
-                        starkes Strahlwasser" (6). Wichtig zu wissen: Die Wasserskala ist keine einfache
+                        Schutz gegen Wasser (0–9). Ein Beispiel: IP66 heißt „staubdicht“ (6) und „geschützt gegen
+                        starkes Strahlwasser“ (6). Wichtig zu wissen: Die Wasserskala ist keine einfache
                         Rangfolge. IP67/IP68 bedeuten Schutz beim Untertauchen – sagen aber nichts über
                         Strahlwasser aus. Für Baustellen ist Schlagregen und Spritzwasser das reale Szenario, und
-                        genau dafür steht die 6 an zweiter Stelle – nicht die vermeintlich „höhere" 7 oder 8.
+                        genau dafür steht die 6 an zweiter Stelle – nicht die vermeintlich „höhere“ 7 oder 8.
                     </p>
                     <h3>Welche Klasse braucht eine Baustellenkamera?</h3>
                     <ul>
@@ -1145,16 +1091,7 @@
             Jetzt anrufen — 0178 134 5105
         </a>
     </div>
-    <style>
-        @media (max-width: 768px) {
-            #mobileCallBar { display: block !important; }
-            main { padding-bottom: 60px; }
-            footer { padding-bottom: 60px; }
-        }
-    </style>
 
-    <!-- Translations -->
-    <script src="/translations.js" defer></script>
     <script>
         function toggleMobileMenu() {
             const nav = document.getElementById('mainNav');

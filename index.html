@@ -10,7 +10,7 @@
     
     <!-- Primary Meta Tags -->
     <title>Baustellenkamera Leipzig | Zeitraffer & Baudokumentation</title>
-    <meta name="description" content="Professionelle Baustellenkameras und Zeitraffer für Leipzig. 4K-Qualität, DSGVO-konform, 24/7 Cloud-Zugang. Baudokumentation für Bauunternehmen, Projektentwickler & Architekten.">
+    <meta name="description" content="Baustellenkamera & Zeitraffer für Leipzig +120 km: 4K, DSGVO-konform, Cloud-Zugang. Baudokumentation für Bauunternehmen, Entwickler & Architekten. Ab 250 €/Monat.">
     <meta name="keywords" content="Baustellenkamera Leipzig, Zeitraffer Baustelle, Timelapse Baudokumentation, Baustellendokumentation, 4K Zeitraffer, Baufortschritt dokumentieren, Baustellenüberwachung, DSGVO-konform, Cloud-Zugang Baustelle">
     <meta name="author" content="Burnett & Manhardt GbR">
     <meta name="robots" content="index, follow">
@@ -33,8 +33,8 @@
     <meta property="og:title" content="Baustellenkamera Leipzig | Zeitraffer & Baudokumentation">
     <meta property="og:description" content="Professionelle Baustellenkameras und Zeitraffer für Leipzig. 4K-Qualität, DSGVO-konform, 24/7 Cloud-Zugang.">
     <meta property="og:image" content="https://baustellen-timelapse-leipzig.de/hero-construction.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
     <meta property="og:image:alt" content="Professionelle Baustellenkamera-Installation in Leipzig – 4K-Zeitraffer-Dokumentation">
     <meta property="og:locale" content="de_DE">
     
@@ -67,18 +67,12 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "51.3396955",
-        "longitude": "12.3730747"
+        "latitude": "51.3231",
+        "longitude": "12.3244"
       },
       "telephone": "+491781345105",
       "email": "info@baustellen-timelapse-leipzig.de",
       "priceRange": "ab 250 € pro Monat",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
       "areaServed": [
         {"@type": "City", "name": "Leipzig"},
         {"@type": "City", "name": "Halle (Saale)"},
@@ -99,10 +93,13 @@
       "name": "Baustellen-Timelapse Leipzig",
       "description": "Professionelle Baustellenkameras, Zeitraffer-Filmproduktion und digitale Baudokumentation mit 4K-Qualität",
       "provider": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
-      "areaServed": {
-        "@type": "City",
-        "name": "Leipzig"
-      },
+      "areaServed": [
+        {"@type": "City", "name": "Leipzig"},
+        {"@type": "City", "name": "Halle (Saale)"},
+        {"@type": "City", "name": "Chemnitz"},
+        {"@type": "City", "name": "Jena"},
+        {"@type": "City", "name": "Erfurt"}
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Baudokumentation Services",
@@ -148,32 +145,35 @@
     }
     </script>
     
-    <!-- Structured Data - VideoObject (Example Timelapse) -->
+    <!-- Structured Data - VideoObjects (Portfolio) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      "name": "Baustellen-Zeitraffer Leipzig - Beispielprojekt",
-      "description": "Professionelle Zeitraffer-Dokumentation eines Bauprojekts in Leipzig. Von den ersten Fundamentarbeiten bis zur Fertigstellung in 4K-Qualität.",
-      "thumbnailUrl": "https://baustellen-timelapse-leipzig.de/hero-construction.jpg",
+      "name": "Neue Welle Leipzig – Projektüberblick",
+      "description": "Kontinuierliche Zeitraffer-Dokumentation des Bauvorhabens Neue Welle in Leipzig in 4K-Qualität.",
+      "thumbnailUrl": "https://baustellen-timelapse-leipzig.de/neue_welle_thumb.jpg",
       "uploadDate": "2026-01-31",
       "duration": "PT2M30S",
       "contentUrl": "https://pub-b64f0b14938f4f54a6acb4b84f9549ff.r2.dev/neue_welle_jan26.mp4",
-      "embedUrl": "https://www.youtube.com/embed/uOA2IUL0Uf8",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Baustellen-Timelapse Leipzig",
-        "url": "https://baustellen-timelapse-leipzig.de"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Burnett & Manhardt GbR"
-      }
+      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"}
     }
     </script>
-    
 
-        <script type="application/ld+json">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Wohnhaus Delitzscher Straße – Bauzeitraffer",
+      "description": "Vertikaler Zeitraffer-Projektclip eines Wohnhausneubaus in Leipzig über 12 Monate Bauzeit.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/uOA2IUL0Uf8/hqdefault.jpg",
+      "uploadDate": "2026-01-31",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/uOA2IUL0Uf8",
+      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"}
+    }
+    </script>
+
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -192,7 +192,7 @@
     }
     </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -339,56 +339,19 @@
             nav.mobile-open {
                 display: flex;
             }
-            
-            .language-switcher {
-                margin-left: 0 !important;
-            }
         }
-        
+
         nav a {
             color: var(--muted);
             text-decoration: none;
             font-size: 0.875rem;
             transition: color 0.3s;
         }
-        
+
         nav a:hover {
             color: var(--foreground);
         }
-        
-        /* Language Switcher */
-        .language-switcher {
-            display: inline-flex;
-            align-items: center;
-            margin-left: 1.5rem;
-            gap: 0.5rem;
-        }
-        
-        .lang-btn {
-            background: none;
-            border: none;
-            color: var(--muted);
-            cursor: pointer;
-            font-size: 0.875rem;
-            font-weight: 600;
-            padding: 0.25rem 0.5rem;
-            transition: color 0.3s;
-            font-family: inherit;
-        }
-        
-        .lang-btn:hover {
-            color: var(--foreground);
-        }
-        
-        .lang-btn.active {
-            color: var(--primary);
-        }
-        
-        .lang-separator {
-            color: var(--muted);
-            font-size: 0.875rem;
-        }
-        
+
         .btn {
             background: var(--primary);
             color: #000;
@@ -822,6 +785,7 @@
             inset: 0;
             width: 100%;
             height: 100%;
+            border: 0;
         }
 
         .video-container video {
@@ -1234,6 +1198,12 @@
             font-size: 0.85rem;
             margin-top: 1rem;
         }
+
+        @media (max-width: 768px) {
+            #mobileCallBar { display: block !important; }
+            main { padding-bottom: 60px; }
+            footer { padding-bottom: 60px; }
+        }
     </style>
 </head>
 <body>
@@ -1261,11 +1231,6 @@
                     <a href="/ratgeber" data-i18n="nav_guide">Ratgeber</a>
                     <a href="/baustellenkamera-mieten-leipzig" data-i18n="nav_pricing">Miete & Preise</a>
                     <a href="#contact" data-i18n="nav_contact">Kontakt</a>
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="de" aria-label="Deutsch">DE</button>
-                        <span class="lang-separator">/</span>
-                        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-                    </div>
                     <a href="tel:+491781345105" style="color: var(--primary); font-weight: 500; white-space: nowrap;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 0.25rem;">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -1280,7 +1245,7 @@
     </header>
 
     <!-- Fixed Background Image (outside main for proper layering) -->
-    <img src="/hero-construction.jpg" alt="Professionelle Baustellenkamera-Installation in Leipzig – 4K-Zeitraffer-Dokumentation für Bauunternehmen und Projektentwickler" class="hero-bg" onerror="this.onerror=null;this.src='/public/hero-construction.jpg';">
+    <img src="/hero-construction.jpg" alt="Professionelle Baustellenkamera-Installation in Leipzig – 4K-Zeitraffer-Dokumentation für Bauunternehmen und Projektentwickler" width="1920" height="1080" class="hero-bg" onerror="this.onerror=null;this.src='/public/hero-construction.jpg';">
     
     <main>
         <!-- Hero Section -->
@@ -1294,7 +1259,7 @@
                     </svg>
                     <span data-i18n="hero_badge">Leipzig & 120 km Umgebung</span>
                 </div>
-                <h1 class="animate-fade-in" style="animation-delay: 0.1s;" data-i18n="home_hero_title">BAUSTELLENKAMERA MIETEN <span style="color: var(--primary);">in LEIPZIG</span></h1>
+                <h1 class="animate-fade-in" style="animation-delay: 0.1s;">BAUSTELLENKAMERA & ZEITRAFFER <span style="color: var(--primary);">für LEIPZIG</span></h1>
                 <p class="animate-fade-in" style="animation-delay: 0.2s;" data-i18n="home_hero_subtitle">
                     Wir montieren die 4K-Kamera in wenigen Tagen, Sie sehen Ihre Baustelle jederzeit in der Cloud — und am Ende erhalten Sie den fertigen Zeitrafferfilm für Marketing und Bauherren-Kommunikation. Lokales Team, ein Ansprechpartner, DSGVO-konform.
                 </p>
@@ -1364,12 +1329,12 @@
                     <p class="section-description" data-i18n="install_subtitle">So montiert unser Team eine professionelle 4K-Baustellenkamera – hier bei einem Einsatz in Plagwitz, Leipzig. Rooftop-Montage, Ausrichtung und Inbetriebnahme in einem Zug.</p>
                 </div>
                 <div class="install-grid">
-                    <img src="/public/Instalation/IMG_4425.webp" alt="Blick vom Rooftop auf die Baustelle in Plagwitz, Leipzig" loading="lazy" />
-                    <img src="/public/Instalation/IMG_4441.webp" alt="Teammitglied befestigt Kamerahalterung auf dem Dach" loading="lazy" />
-                    <img src="/public/Instalation/IMG_4460.webp" alt="Montierte 4K-Baustellenkamera mit Blick über Leipzig" loading="lazy" />
-                    <img src="/public/Instalation/IMG_4484.webp" alt="Teammitglied mit Schutzhelm richtet Stativ auf dem Dach aus" loading="lazy" />
-                    <img src="/public/Instalation/IMG_4523.webp" alt="Hände justieren Kamera auf Stativ, Leipziger Stadtpanorama im Hintergrund" loading="lazy" />
-                    <img src="/public/Instalation/IMG_4525.webp" alt="Teammitglied mit Schutzhelm kalibriert die Baustellenkamera auf dem Rooftop" loading="lazy" />
+                    <img src="/public/installation/IMG_4425.webp" width="800" height="600" alt="Blick vom Rooftop auf die Baustelle in Plagwitz, Leipzig" loading="lazy" />
+                    <img src="/public/installation/IMG_4441.webp" width="600" height="800" alt="Teammitglied befestigt Kamerahalterung auf dem Dach" loading="lazy" />
+                    <img src="/public/installation/IMG_4460.webp" width="600" height="800" alt="Montierte 4K-Baustellenkamera mit Blick über Leipzig" loading="lazy" />
+                    <img src="/public/installation/IMG_4484.webp" width="619" height="800" alt="Teammitglied mit Schutzhelm richtet Stativ auf dem Dach aus" loading="lazy" />
+                    <img src="/public/installation/IMG_4523.webp" width="800" height="553" alt="Hände justieren Kamera auf Stativ, Leipziger Stadtpanorama im Hintergrund" loading="lazy" />
+                    <img src="/public/installation/IMG_4525.webp" width="600" height="800" alt="Teammitglied mit Schutzhelm kalibriert die Baustellenkamera auf dem Rooftop" loading="lazy" />
                 </div>
                 <p class="install-caption" data-i18n="install_caption">Installation in Plagwitz, Leipzig · März 2026</p>
             </div>
@@ -1573,7 +1538,6 @@
                                     <iframe
                                         src="https://www.youtube-nocookie.com/embed/uOA2IUL0Uf8"
                                         title="Wohnhaus Delitzscher Straße (Hochformat)"
-                                        frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen>
                                     </iframe>
@@ -1662,7 +1626,7 @@
                     <div class="card" style="padding: 1.5rem;">
                         <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#9889;</div>
                         <h3 style="margin-bottom: 0.5rem; color: var(--primary);">Schnelle Reaktionszeit</h3>
-                        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7;">Installation innerhalb weniger Tage, nicht Wochen. Bei Problemen sind wir in unter einer Stunde vor Ort — weil wir in Leipzig sitzen, nicht in einer anderen Stadt.</p>
+                        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7;">Installation innerhalb weniger Tage, nicht Wochen. Bei Problemen sind wir in Leipzig meist in unter einer Stunde vor Ort — weil wir hier sitzen, nicht in einer anderen Stadt.</p>
                     </div>
                     <div class="card" style="padding: 1.5rem;">
                         <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#129309;</div>
@@ -1709,6 +1673,7 @@
                         <a href="tel:+491781345105" class="btn" style="padding: 1rem 2rem; font-size: 1.05rem; background: var(--primary); color: #000;">Jetzt anrufen – Angebot erhalten</a>
                         <a href="#contact" class="btn" style="padding: 1rem 2rem; font-size: 1.05rem; background: transparent; border: 2px solid var(--primary); color: var(--primary);">Formular ausfüllen</a>
                     </div>
+                    <p style="margin-top: 1.25rem; font-size: 0.95rem;"><a href="/baustellenkamera-mieten-leipzig" style="color: var(--primary); font-weight: 500;">Alle Preise und Mietkonditionen: Baustellenkamera mieten in Leipzig →</a></p>
                 </div>
             </div>
         </section>
@@ -1825,7 +1790,6 @@
                             <div id="phone-error" class="error-message" role="alert"></div>
                         </div>
 
-                        <!-- Honeypot field for bot prevention (hidden from users) -->
                         <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
                             <label for="website">Website</label>
                             <input 
@@ -1902,13 +1866,6 @@
             Jetzt anrufen — 0178 134 5105
         </a>
     </div>
-    <style>
-        @media (max-width: 768px) {
-            #mobileCallBar { display: block !important; }
-            main { padding-bottom: 60px; }
-            footer { padding-bottom: 60px; }
-        }
-    </style>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
@@ -2263,7 +2220,6 @@
     </script>
     
     <!-- Translations -->
-    <script src="/translations.js" defer></script>
     
     <!-- Mobile Menu Toggle -->
     <script>
