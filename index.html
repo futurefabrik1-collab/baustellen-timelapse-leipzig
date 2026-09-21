@@ -73,6 +73,8 @@
       "telephone": "+491781345105",
       "email": "info@baustellen-timelapse-leipzig.de",
       "priceRange": "ab 250 € pro Monat",
+      "slogan": "Baustellenkamera mieten in Leipzig – mit fertigem Zeitrafferfilm",
+      "knowsAbout": ["Baustellenkamera", "Baustellenkamera-Miete", "Zeitraffer-Filmproduktion", "Baudokumentation", "DSGVO-konforme Baudokumentation"],
       "areaServed": [
         {"@type": "City", "name": "Leipzig"},
         {"@type": "City", "name": "Halle (Saale)"},
@@ -141,7 +143,9 @@
       "name": "Baustellen-Timelapse Leipzig",
       "url": "https://baustellen-timelapse-leipzig.de",
       "description": "Professionelle Baustellendokumentation und Zeitraffer-Filmproduktion",
-      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"}
+      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
+      "about": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
+      "mainEntity": {"@id": "https://baustellen-timelapse-leipzig.de/#business"}
     }
     </script>
     
@@ -151,12 +155,14 @@
       "@context": "https://schema.org",
       "@type": "VideoObject",
       "name": "Neue Welle Leipzig – Projektüberblick",
-      "description": "Kontinuierliche Zeitraffer-Dokumentation des Bauvorhabens Neue Welle in Leipzig in 4K-Qualität.",
+      "description": "Referenzprojekt von Baustellen-Timelapse Leipzig: kontinuierliche 4K-Zeitraffer-Dokumentation des Bauvorhabens Neue Welle in Leipzig für den Kunden BEKA Immobilien.",
       "thumbnailUrl": "https://baustellen-timelapse-leipzig.de/neue_welle_thumb.jpg",
       "uploadDate": "2026-01-31",
       "duration": "PT2M30S",
       "contentUrl": "https://pub-b64f0b14938f4f54a6acb4b84f9549ff.r2.dev/neue_welle_jan26.mp4",
-      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"}
+      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
+      "creator": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
+      "about": {"@type": "Thing", "name": "Bauvorhaben Neue Welle Leipzig (Projektentwickler: BEKA Immobilien)"}
     }
     </script>
 
@@ -165,11 +171,13 @@
       "@context": "https://schema.org",
       "@type": "VideoObject",
       "name": "Wohnhaus Delitzscher Straße – Bauzeitraffer",
-      "description": "Vertikaler Zeitraffer-Projektclip eines Wohnhausneubaus in Leipzig über 12 Monate Bauzeit.",
+      "description": "Referenzprojekt von Baustellen-Timelapse Leipzig: vertikaler Zeitraffer-Clip, der die 12-monatige Bauzeit des Wohnhauses Delitzscher Straße für den Kunden BEKA Immobilien dokumentiert.",
       "thumbnailUrl": "https://i.ytimg.com/vi/uOA2IUL0Uf8/hqdefault.jpg",
       "uploadDate": "2026-01-31",
       "embedUrl": "https://www.youtube-nocookie.com/embed/uOA2IUL0Uf8",
-      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"}
+      "publisher": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
+      "creator": {"@id": "https://baustellen-timelapse-leipzig.de/#business"},
+      "about": {"@type": "Thing", "name": "Bauvorhaben Wohnhaus Delitzscher Straße, Leipzig (Projektentwickler: BEKA Immobilien)"}
     }
     </script>
 
@@ -445,9 +453,11 @@
         }
         
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(1.6rem, 7vw, 3.5rem);
             font-weight: bold;
             margin-bottom: 1.5rem;
+            overflow-wrap: break-word;
+            hyphens: manual;
         }
         
         .hero p {
@@ -1259,7 +1269,7 @@
                     </svg>
                     <span data-i18n="hero_badge">Leipzig & 120 km Umgebung</span>
                 </div>
-                <h1 class="animate-fade-in" style="animation-delay: 0.1s;">BAUSTELLENKAMERA & ZEITRAFFER <span style="color: var(--primary);">für LEIPZIG</span></h1>
+                <h1 class="animate-fade-in" style="animation-delay: 0.1s;">BAUSTELLEN&shy;KAMERA & ZEITRAFFER <span style="color: var(--primary);">für LEIPZIG</span></h1>
                 <p class="animate-fade-in" style="animation-delay: 0.2s;" data-i18n="home_hero_subtitle">
                     Wir montieren die 4K-Kamera in wenigen Tagen, Sie sehen Ihre Baustelle jederzeit in der Cloud — und am Ende erhalten Sie den fertigen Zeitrafferfilm für Marketing und Bauherren-Kommunikation. Lokales Team, ein Ansprechpartner, DSGVO-konform.
                 </p>
@@ -1292,6 +1302,28 @@
                         </svg>
                         <span data-i18n="hero_feature3">Wetterfeste Installation</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Über uns / Auf einen Blick -->
+        <section id="ueber-uns" style="background: var(--background); padding-top: 3rem; padding-bottom: 3rem; position: relative; z-index: 100;">
+            <div class="container" style="max-width: 980px;">
+                <h2 class="section-title" style="text-align: left; font-size: 1.5rem; margin-bottom: 1rem;">Über Baustellen-Timelapse Leipzig</h2>
+                <p style="color: var(--foreground); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1rem;">Baustellen-Timelapse Leipzig ist ein Anbieter für Baustellenkameras, Zeitraffer-Filmproduktion und digitale Baudokumentation in Leipzig und 120&nbsp;km Umgebung. Wir vermieten wetterfeste 4K-Baustellenkameras ab 250&nbsp;€ pro Monat, montieren sie vor Ort, stellen die Aufnahmen DSGVO-konform in der Cloud bereit und produzieren zum Projektende den fertigen Zeitrafferfilm.</p>
+                <p style="color: #c8c8c8; line-height: 1.75; margin-bottom: 1.75rem;">Hinter Baustellen-Timelapse Leipzig steht die Burnett &amp; Manhardt GbR mit Sitz in der Klingenstraße&nbsp;22, 04229 Leipzig. Unsere Kunden sind Bauunternehmen, Projektentwickler und Architekturbüros.</p>
+                <div class="card" style="padding: 1.25rem 1.5rem;">
+                    <h3 style="margin-bottom: 0.9rem; color: var(--primary); font-size: 1.05rem;">Auf einen Blick</h3>
+                    <dl style="display: grid; grid-template-columns: minmax(120px, auto) 1fr; gap: 0.55rem 1.25rem; margin: 0; line-height: 1.55;">
+                        <dt style="font-weight: 600; color: var(--foreground);">Leistung</dt><dd style="margin: 0; color: #c8c8c8;">Baustellenkamera-Miete, Zeitraffer-Filmproduktion, Baudokumentation</dd>
+                        <dt style="font-weight: 600; color: var(--foreground);">Anbieter</dt><dd style="margin: 0; color: #c8c8c8;">Burnett &amp; Manhardt GbR, Leipzig</dd>
+                        <dt style="font-weight: 600; color: var(--foreground);">Preis</dt><dd style="margin: 0; color: #c8c8c8;">ab 250&nbsp;€ pro Monat, individuelles Angebot nach Projektumfang</dd>
+                        <dt style="font-weight: 600; color: var(--foreground);">Technik</dt><dd style="margin: 0; color: #c8c8c8;">4K-Kameras, wetterfest (IP66), LTE, Cloud-Zugang, Solar-Option</dd>
+                        <dt style="font-weight: 600; color: var(--foreground);">Einsatzgebiet</dt><dd style="margin: 0; color: #c8c8c8;">Leipzig + 120&nbsp;km, u.&nbsp;a. Halle, Chemnitz, Jena, Erfurt</dd>
+                        <dt style="font-weight: 600; color: var(--foreground);">Laufzeit</dt><dd style="margin: 0; color: #c8c8c8;">flexibel, von wenigen Wochen bis zu mehreren Jahren</dd>
+                        <dt style="font-weight: 600; color: var(--foreground);">Montage</dt><dd style="margin: 0; color: #c8c8c8;">in der Regel innerhalb weniger Werktage</dd>
+                        <dt style="font-weight: 600; color: var(--foreground);">Kontakt</dt><dd style="margin: 0;"><a href="tel:+491781345105" style="color: var(--primary);">0178 134 5105</a> · <a href="mailto:info@baustellen-timelapse-leipzig.de" style="color: var(--primary);">info@baustellen-timelapse-leipzig.de</a></dd>
+                    </dl>
                 </div>
             </div>
         </section>
@@ -1495,7 +1527,7 @@
             <div class="container">
                 <div class="section-header">
                     <div class="section-badge" data-i18n="portfolio_badge">Referenzen</div>
-                    <h2 class="section-title" data-i18n="portfolio_title">Ausgewählte Projekte aus Leipzig</h2>
+                    <h2 class="section-title" >Referenzprojekte aus Leipzig</h2>
                     <p class="section-description" data-i18n="portfolio_subtitle">Unsere Referenzen verbinden durchgängige Baudokumentation mit sauberer Postproduktion. So entstehen Inhalte für Projektkommunikation, Investor-Updates und Marketing.</p>
                 </div>
 
@@ -1517,21 +1549,21 @@
                     </div>
                     <div class="portfolio-info" style="padding-bottom: 0.5rem;">
                         <div class="portfolio-tags">
-                            <span class="tag">Leipzig</span>
-                            <span class="tag tag-outline" data-i18n="portfolio_tag1">Langzeit-Dokumentation</span>
-                            <span class="tag tag-outline" data-i18n="portfolio_tag2">Marketing-Edit</span>
+                            <span class="tag">Referenzprojekt</span>
+                            <span class="tag tag-outline">Projektart: Langzeit-Dokumentation</span>
+                            <span class="tag tag-outline">Ergebnis: Marketing-Edit</span>
                         </div>
-                        <h3 class="portfolio-title" data-i18n="portfolio1_title">Neue Welle Leipzig – Projektüberblick</h3>
+                        <h3 class="portfolio-title" >Referenzprojekt: Neue Welle Leipzig</h3>
                         <p class="portfolio-subtitle" data-i18n="portfolio1_subtitle">Kontinuierliche Dokumentation eines komplexen Bauvorhabens mit regelmäßigen Zwischenständen für Bauherr, Projektsteuerung und Kommunikationsteams.</p>
-                        <p class="portfolio-meta" data-i18n="portfolio1_meta">Leistungsumfang: Kamera-Setup vor Ort, cloudbasierter Zugriff, kuratierter Schnitt für Präsentationen sowie finale Archivierung des Bildmaterials.</p>
-                        <p class="portfolio-meta" style="border-top: none; padding-top: 0.35rem;"><strong>Projektentwickler:</strong> BEKA Immobilien</p>
+                        <p class="portfolio-meta" >Unser Leistungsumfang: Kamera-Setup vor Ort, cloudbasierter Zugriff, kuratierter Schnitt für Präsentationen sowie finale Archivierung des Bildmaterials.</p>
+                        <p class="portfolio-meta" style="border-top: none; padding-top: 0.35rem;"><strong>Kunde / Auftraggeber:</strong> BEKA Immobilien (Projektentwickler des Bauvorhabens)</p>
                         <a class="portfolio-link" href="https://pub-b64f0b14938f4f54a6acb4b84f9549ff.r2.dev/neue_welle_jan26.mp4" target="_blank" rel="noopener noreferrer" data-i18n="portfolio1_link">Video direkt öffnen ↗</a>
                         <p style="margin-top: 0.45rem; color: var(--muted); font-size: 0.84rem;" data-i18n="portfolio1_fallback">Falls die Einbettung auf Ihrem Gerät nicht startet, öffnen Sie das Video direkt über den Link oben.</p>
                     </div>
                 </div>
 
                 <div class="portfolio-grid">
-                    <article class="portfolio-card delitzscher-layout" style="grid-column: 1 / -1;">
+                    <div class="portfolio-card delitzscher-layout" style="grid-column: 1 / -1;">
                         <div class="video-shell">
                             <div class="video-portrait-wrap" style="max-width: 520px; margin: 0 auto;">
                                 <div class="video-container video-portrait" style="padding-bottom: 177.78%;">
@@ -1546,17 +1578,18 @@
                         </div>
                         <div class="portfolio-info">
                             <div class="portfolio-tags">
-                                <span class="tag">Wohnbau</span>
-                                <span class="tag tag-outline" data-i18n="portfolio_tag3">12 Monate Laufzeit</span>
-                                <span class="tag tag-outline" data-i18n="portfolio_tag4">Social-First</span>
+                                <span class="tag">Referenzprojekt</span>
+                                <span class="tag tag-outline">Projekttyp: Wohnbau</span>
+                                <span class="tag tag-outline">Projektlaufzeit: 12 Monate</span>
+                                <span class="tag tag-outline">Format: Hochformat / Social Media</span>
                             </div>
-                            <h3 class="portfolio-title" data-i18n="portfolio2_title">Wohnhaus Delitzscher Straße</h3>
+                            <h3 class="portfolio-title" >Referenzprojekt: Wohnhaus Delitzscher Straße</h3>
                             <p class="portfolio-subtitle" data-i18n="portfolio2_subtitle">Vertikaler Projektclip für Social Media, Website-Einbindung und Bauherren-Updates. Fokus auf klar erkennbare Fortschrittsphasen und visuelle Qualität auf Mobilgeräten.</p>
-                            <p class="portfolio-meta" data-i18n="portfolio2_meta">Lieferung: Hochformat-Versionen, optimierte Exportgrößen und ein konsistenter Look für wiederkehrende Projektkommunikation.</p>
-                            <p class="portfolio-meta" style="border-top: none; padding-top: 0.35rem;"><strong>Projektentwickler:</strong> BEKA Immobilien</p>
+                            <p class="portfolio-meta" >Unsere Lieferung an den Kunden: Hochformat-Versionen, optimierte Exportgrößen und ein konsistenter Look für wiederkehrende Projektkommunikation.</p>
+                            <p class="portfolio-meta" style="border-top: none; padding-top: 0.35rem;"><strong>Kunde / Auftraggeber:</strong> BEKA Immobilien (Projektentwickler des Bauvorhabens)</p>
                             <a class="portfolio-link" href="https://www.youtube.com/watch?v=uOA2IUL0Uf8" target="_blank" rel="noopener noreferrer" data-i18n="portfolio2_link">Auf YouTube öffnen ↗</a>
                         </div>
-                    </article>
+                    </div>
 
                 </div>
             </div>
@@ -1576,13 +1609,13 @@
                             <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; font-weight: 600; color: #000; font-size: 0.85rem;">BI</div>
                             <div>
                                 <div style="font-weight: 500; font-size: 0.9rem;">BEKA Immobilien</div>
-                                <div style="color: var(--muted); font-size: 0.8rem;">Projektentwicklung, Leipzig</div>
+                                <div style="color: var(--muted); font-size: 0.8rem;">Kundenstimme · Projektentwicklung, Leipzig</div>
                             </div>
                         </div>
                     </div>
                     <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.05rem;">Referenzprojekte mit BEKA Immobilien</h3>
-                        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Zwei dokumentierte Bauvorhaben in Leipzig — die "Neue Welle" und das Wohnhaus Delitzscher Straße (12 Monate Laufzeit). Beide Filme finden Sie in unseren <a href="#portfolio" style="color: var(--primary);">Referenzen</a>.</p>
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.05rem;">Unser Kunde: BEKA Immobilien</h3>
+                        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Für BEKA Immobilien haben wir zwei Bauvorhaben in Leipzig dokumentiert — die „Neue Welle“ und das Wohnhaus Delitzscher Straße (12 Monate Projektlaufzeit). Beide Filme finden Sie in unseren <a href="#portfolio" style="color: var(--primary);">Referenzen</a>.</p>
                         <a href="tel:+491781345105" style="color: var(--primary); font-weight: 500; font-size: 0.95rem;">Referenzen persönlich besprechen → 0178 134 5105</a>
                     </div>
                 </div>
