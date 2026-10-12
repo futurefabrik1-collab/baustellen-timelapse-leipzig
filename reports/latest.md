@@ -1,4 +1,4 @@
-# Weekly Market Intel — 2026-10-05
+# Weekly Market Intel — 2026-10-12
 
 Target site: https://baustellen-timelapse-leipzig.de
 
@@ -16,7 +16,7 @@ Target site: https://baustellen-timelapse-leipzig.de
 - Title (54): Zeitraffer-Kamera für die Baustelle | BauTV+ von NetCo
 - Description length: 153
 - H1 count: 1
-- Approx words: 2684
+- Approx words: 2676
 - CTA keyword count: 24
 
 ### https://baustellen-kamera.de/
@@ -35,7 +35,7 @@ Target site: https://baustellen-timelapse-leipzig.de
 
 ## Prioritized Actions (next 7 days)
 
-1. Increase on-page helpful content depth (you: 1329 words, competitor avg: 1752).
+1. Increase on-page helpful content depth (you: 1329 words, competitor avg: 1749).
 
 ## Notes
 - This is an automated surface-level scrape; pair it with Search Console + Ads data for decisions.
