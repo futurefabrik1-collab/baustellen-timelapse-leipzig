@@ -1,4 +1,4 @@
-# Weekly Market Intel — 2026-10-12
+# Weekly Market Intel — 2026-10-19
 
 Target site: https://baustellen-timelapse-leipzig.de
 
