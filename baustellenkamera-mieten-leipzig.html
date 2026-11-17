@@ -63,7 +63,7 @@
       "@type":"OfferCatalog",
       "name":"Mietpakete Baustellenkamera Leipzig",
       "itemListElement":[
-        {"@type":"Offer","name":"Baustellenkamera mieten","description":"4K-Kamera, Installation, Cloud-Zugang, DSGVO-konforme Umsetzung. Individuelles Angebot nach Projektumfang.","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"EUR","unitCode":"MON","unitText":"Monat","minPrice":"250"}}
+        {"@type":"Offer","name":"Baustellenkamera mieten","description":"Alles inklusive: 4K-Kamera (IP66), Montage und Ausrichtung vor Ort, Mobilfunk mit SIM und Datenvolumen, Cloud-Zugang rund um die Uhr, Störungsservice, fertiger Zeitrafferfilm und Abbau am Projektende. Keine Einrichtungsgebühr, keine Montagepauschale, kein Filmzuschlag. Preis pro Kamera, zzgl. MwSt.","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"EUR","unitCode":"MON","unitText":"Monat","minPrice":"250"}}
       ]
     }
   }
@@ -74,6 +74,9 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
+      {"@type":"Question","name":"Muss ich die Baustellenkamera selbst montieren?","acceptedAnswer":{"@type":"Answer","text":"Nein. Wir montieren jede Kamera selbst. Unser Team kommt nach Terminabsprache auf die Baustelle, sucht mit Ihnen die Perspektive, befestigt die Kamera an Kran, Fassade, Gerüst oder Mast, richtet sie aus und prüft das Bild vor Ort. Am Projektende bauen wir genauso wieder ab."}},
+      {"@type":"Question","name":"Fällt eine Einrichtungsgebühr oder eine Abbaugebühr an?","acceptedAnswer":{"@type":"Answer","text":"Nein. Einrichtung, Cloud-Zugänge, Inbetriebnahme, Montage und Abbau sind im Monatspreis ab 250 Euro zzgl. MwSt. enthalten. Separat berechnen wir nur Zusatzwünsche wie ein Solar-Paket, weitere Kameraperspektiven, höhere Update-Intervalle, Drohnenaufnahmen oder einen 3D-Scan."}},
+      {"@type":"Question","name":"Sind die Preise netto oder brutto?","acceptedAnswer":{"@type":"Answer","text":"Alle genannten Preise sind Nettopreise zzgl. 19 Prozent Mehrwertsteuer. Unser Angebot richtet sich an Bauunternehmen, Projektentwickler, Architekturbüros und gewerbliche Bauherren."}},
       {"@type":"Question","name":"Gibt es eine Mindestlaufzeit?","acceptedAnswer":{"@type":"Answer","text":"Wir sind flexibel — ob wenige Wochen für eine Bauphase oder mehrere Jahre für ein Großprojekt. Die Laufzeit richtet sich nach Ihrem Projektplan."}},
       {"@type":"Question","name":"Was passiert bei Störungen?","acceptedAnswer":{"@type":"Answer","text":"Wir überwachen alle Kameras aus der Ferne und erkennen Ausfälle meist, bevor Sie sie bemerken. Als lokales Team in Leipzig sind wir bei Bedarf kurzfristig vor Ort. Für die Dauer einer Störung entstehen Ihnen keine Nachteile."}},
       {"@type":"Question","name":"Kann die Kamera während des Projekts umziehen?","acceptedAnswer":{"@type":"Answer","text":"Ja, ein Standortwechsel ist jederzeit möglich — etwa wenn der Kran versetzt wird oder ein neuer Bauabschnitt beginnt. Wir übernehmen den Umbau und richten die Kamera neu aus. Der Aufwand wird transparent nach Montageeinsatz berechnet."}},
@@ -147,7 +150,9 @@
         <a href="/#services" data-i18n="nav_services">Leistungen</a>
         <a href="/#portfolio" data-i18n="nav_portfolio">Referenzen</a>
         <a href="/ratgeber" data-i18n="nav_guide">Ratgeber</a>
-        <a href="/baustellenkamera-mieten-leipzig" class="active">Miete & Preise</a>
+        <a href="/baustellenkamera-mieten-leipzig" class="active">Miete</a>
+        <a href="/kosten-baustellenkamera-leipzig">Kosten</a>
+        <a href="/dsgvo-baustellenkamera">DSGVO</a>
         <a href="/#contact" data-i18n="nav_contact">Kontakt</a>
         <a href="tel:+491781345105" style="color: var(--primary); font-weight: 500; white-space: nowrap;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 0.25rem;">
@@ -167,7 +172,7 @@
         <img src="/public/banner1.jpeg" alt="Baustellenkamera Installation in Leipzig – Teammitglied richtet 4K-Kamera auf Rooftop aus" width="1600" height="1107" fetchpriority="high" style="width:100%;max-height:420px;object-fit:cover;border-radius:.85rem;margin-bottom:1.25rem;border:1px solid rgba(245,158,11,.25);" loading="eager" />
         <div class="hero-block">
           <h1 data-i18n="pricing_h1">Baustellenkamera mieten in Leipzig</h1>
-          <p class="muted" data-i18n="pricing_hero_sub">Kamera montiert in unter einer Woche, Bilder in Ihrer Cloud ab Tag 1, Zeitrafferfilm bei Projektende inklusive. Keine lange Mindestlaufzeit — Sie zahlen nur, solange gebaut wird.</p>
+          <p class="muted" data-i18n="pricing_hero_sub">Ein Monatspreis ab 250 € und alles ist drin: Montage durch unser Team in unter einer Woche, Bilder in Ihrer Cloud ab Tag 1, Zeitrafferfilm bei Projektende und Abbau am Ende. Keine Einrichtungsgebühr, keine Montagepauschale, keine lange Mindestlaufzeit — Sie zahlen nur, solange gebaut wird.</p>
           <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem">
             <a class="btn" href="tel:+491781345105" style="background:var(--primary);color:#000;">Jetzt anrufen</a>
             <a class="btn" href="/#contact" style="background:transparent;border:2px solid var(--primary);color:var(--primary);">Formular ausfüllen</a>
@@ -182,17 +187,20 @@
         <h2 style="margin-bottom:1rem;" data-i18n="pricing_plans_title">Preise & Mietkonditionen</h2>
         <div class="card" style="margin-top:0; padding: 2rem; text-align: center; border-color: rgba(245,158,11,.35);">
           <p style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.25rem;">ab 250 €<span style="font-size: 1.1rem; font-weight: 400; color: var(--muted);">/Monat</span></p>
-          <p class="muted" style="font-size: 1rem; margin-bottom: 1.5rem;">Individuelles Angebot nach Projektumfang</p>
+          <p class="muted" style="font-size: 1rem; margin-bottom: 0.4rem;">pro Kamera, zzgl. MwSt. — alles inklusive</p>
+          <p style="color: var(--primary); font-size: 0.92rem; font-weight: 600; margin-bottom: 1.5rem;">Keine Einrichtungsgebühr &middot; keine Montagepauschale &middot; kein Filmzuschlag &middot; keine Abbaugebühr</p>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; text-align: left;">
-            <ul class="muted" style="padding-left: 1.2rem; line-height: 2.2;">
-              <li>4K-Kamera + Installation</li>
-              <li>Cloud-Zugang 24/7</li>
-              <li>DSGVO-konforme Umsetzung</li>
+            <ul class="muted" style="padding-left: 1.2rem; line-height: 2.1;">
+              <li>4K-Kamera, wetterfest (IP66)</li>
+              <li>Montage und Ausrichtung vor Ort</li>
+              <li>Mobilfunk, SIM und Datenvolumen</li>
+              <li>Cloud-Zugang 24/7 im Browser</li>
             </ul>
-            <ul class="muted" style="padding-left: 1.2rem; line-height: 2.2;">
-              <li>Lokales Team in Leipzig</li>
-              <li>Flexible Laufzeiten</li>
-              <li>Persönliche Betreuung</li>
+            <ul class="muted" style="padding-left: 1.2rem; line-height: 2.1;">
+              <li>Fertiger Zeitrafferfilm</li>
+              <li>Fernüberwachung &amp; Störungsservice</li>
+              <li>Abbau am Projektende</li>
+              <li>DSGVO-konforme Umsetzung</li>
             </ul>
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
@@ -201,7 +209,7 @@
           </div>
         </div>
         <div class="card" style="margin-top:1rem; border-color: rgba(245,158,11,.35); background: rgba(245,158,11,.08);">
-          <p class="muted" style="margin:0;">Die finalen Kosten richten sich nach Laufzeit, Update-Frequenz, Montageaufwand und gewünschter Postproduktion. Rufen Sie uns an für ein unverbindliches Angebot – wir beraten Sie persönlich. Was Sie am Ende erwartet, zeigen unsere <a href="/#portfolio" style="color:var(--primary);">Referenzen aus der Baudokumentation</a>.</p>
+          <p class="muted" style="margin:0;">Die finalen Kosten richten sich nach Laufzeit, Update-Frequenz, Montageaufwand und Anzahl der Kameras. Was bei vielen Anbietern als Einmalposten dazukommt – Einrichtung, Montage, Filmproduktion, Abbau – ist bei uns im Monatspreis enthalten. Eine Aufstellung aller sechs Kostenblöcke samt Rechner finden Sie auf unserer <a href="/kosten-baustellenkamera-leipzig">Kostenseite</a>. Rufen Sie uns an für ein unverbindliches Angebot – wir beraten Sie persönlich. Was Sie am Ende erwartet, zeigen unsere <a href="/#portfolio" style="color:var(--primary);">Referenzen aus der Baudokumentation</a>.</p>
         </div>
       </div>
     </section>
@@ -322,6 +330,22 @@
           <article class="card">
             <h3>Wie schnell ist die Kamera verfügbar?</h3>
             <p class="muted">In der Regel montieren wir Ihre Baustellenkamera innerhalb weniger Tage nach Beauftragung — meist in unter einer Woche. Als Team vor Ort in Leipzig brauchen wir keine langen Vorlaufzeiten. Rufen Sie uns an, oft geht es schneller als gedacht.</p>
+        </div>
+        <div class="card">
+          <h3>Muss ich die Kamera selbst montieren?</h3>
+          <p class="muted">Nein. Wir montieren jede Kamera selbst. Unser Team kommt nach Terminabsprache auf die Baustelle, sucht mit Ihnen die Perspektive, befestigt die Kamera an Kran, Fassade, Gerüst oder Mast, richtet sie aus und prüft das Bild vor Ort. Sie bekommen kein Paket mit Montageanleitung und müssen niemanden aus Ihrem Team in die Höhe schicken. Am Projektende bauen wir genauso wieder ab.</p>
+        </div>
+        <div class="card">
+          <h3>Fällt eine Einrichtungsgebühr oder eine Abbaugebühr an?</h3>
+          <p class="muted">Nein. Einrichtung, Cloud-Zugänge, Inbetriebnahme, Montage und Abbau sind im Monatspreis enthalten. Separat berechnen wir nur echte Zusatzwünsche: ein Solar-Paket für Standorte ohne Strom, weitere Kameraperspektiven, höhere Update-Intervalle, Drohnenaufnahmen oder einen 3D-Scan.</p>
+        </div>
+        <div class="card">
+          <h3>Sind die Preise netto oder brutto?</h3>
+          <p class="muted">Alle genannten Preise sind Nettopreise zzgl. 19 % Mehrwertsteuer. Unser Angebot richtet sich an Bauunternehmen, Projektentwickler, Architekturbüros und gewerbliche Bauherren.</p>
+        </div>
+        <div class="card">
+          <h3>Wie wird der Datenschutz auf der Baustelle gelöst?</h3>
+          <p class="muted">Wir klären Standort, Bildfeld, Intervall und Löschfrist vor der Montage mit Ihnen, blenden Nachbargrundstücke und öffentliche Wege aus und verpixeln Personen auf Wunsch automatisch. AV-Vertrag und Mustertexte für die Hinweisbeschilderung stellen wir bereit. Die Details stehen in unserem <a href="/dsgvo-baustellenkamera">Leitfaden zu Baustellenkamera und DSGVO</a>.</p>
           </article>
         </div>
       </div>
@@ -344,7 +368,9 @@
       <p data-i18n="footer_copyright">&copy; 2026 Baustellen-Timelapse Leipzig | Burnett & Manhardt GbR</p>
       <p style="margin-top: 0.5rem;">
         <a href="/impressum" style="color: var(--primary); text-decoration: none;" data-i18n="footer_imprint_label">Impressum</a> |
-        <a href="/datenschutz" style="color: var(--primary); text-decoration: none;" data-i18n="footer_privacy_label">Datenschutz</a>
+        <a href="/datenschutz" style="color: var(--primary); text-decoration: none;" data-i18n="footer_privacy_label">Datenschutz</a> |
+        <a href="/kosten-baustellenkamera-leipzig" style="color: var(--primary); text-decoration: none;">Kosten</a> |
+        <a href="/dsgvo-baustellenkamera" style="color: var(--primary); text-decoration: none;">DSGVO</a>
       </p>
     </div>
   </footer>
